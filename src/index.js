@@ -21,7 +21,8 @@ import "./index.css";
 import { CustomThemeProvider } from "components/CustomThemeProvider/CustomThemeProvider";
 
 // const baseURL = "/command_project_React_Node";
-const baseURL = "/react-ui-tp3-soyummy";
+
+// !!!  handleErrors
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,12 +31,10 @@ const queryClient = new QueryClient({
     },
   },
   queryCache: new QueryCache({
-    onError: (axiosError) =>
-      handleErrors({ axiosError, store, queryClient, baseURL }),
+    onError: (axiosError) => handleErrors({ axiosError, store, queryClient }),
   }),
   mutationCache: new MutationCache({
-    onError: (axiosError) =>
-      handleErrors({ axiosError, store, queryClient, baseURL }),
+    onError: (axiosError) => handleErrors({ axiosError, store, queryClient }),
   }),
 });
 
