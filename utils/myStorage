@@ -1,0 +1,49 @@
+const save = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (error) {
+    return null;
+  }
+};
+
+const get = key => {
+  try {
+    return JSON.parse(localStorage.getItem(key));
+  } catch (error) {
+    return null;
+  }
+};
+
+const remove = key => {
+  try {
+    return localStorage.removeItem(key);
+  } catch (error) {
+    return null;
+  }
+};
+
+export const myStorage = {
+  get,
+  save,
+  remove,
+};
+
+/*
+==================example of usage  of this function  ================
+iimport myStorage from './path/to/myStorage';
+
+// save ingredients to localStorage
+const ingredients = [
+  { id: 1, name: 'Salt', image: 'salt.jpg', quantity: 1, unit: 'tsp' },
+  { id: 2, name: 'Sugar', image: 'sugar.jpg', quantity: 2, unit: 'tbsp' },
+];
+myStorage.save('ingredients', ingredients);
+
+// retrieve ingredients from localStorage
+const retrievedIngredients = myStorage.get('ingredients');
+console.log(retrievedIngredients); // [{ id: 1, name: 'Salt', image: 'salt.jpg', quantity: 1, unit: 'tsp' }, { id: 2, name: 'Sugar', image: 'sugar.jpg', quantity: 2, unit: 'tbsp' }]
+
+// remove ingredients from localStorage
+myStorage.remove('ingredients');
+;
+*/

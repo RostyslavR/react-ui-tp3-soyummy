@@ -1,0 +1,34 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export const useScrollUp = () => {
+  const routePath = useLocation();
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    onTop();
+  }, [routePath]);
+
+  return null;
+};
+
+/*
+====================example of use of useScrollUp in any page================
+
+
+import React from 'react';
+import { useScrollUp } from './path/to/useScrollUp';
+
+const ExamplePage = () => {
+  useScrollUp();
+
+  return (
+    <div>
+      { page content }
+    </div>
+  );
+};
+
+export default ExamplePage;
+ */

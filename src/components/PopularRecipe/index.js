@@ -1,0 +1,1 @@
+export { PopularRecipe } from './PopularRecipe';

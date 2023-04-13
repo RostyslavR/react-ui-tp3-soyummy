@@ -1,0 +1,1 @@
+export { FollowUs } from './FollowUs';
