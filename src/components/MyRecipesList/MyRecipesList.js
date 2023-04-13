@@ -45,7 +45,7 @@ export const MyRecipesList = () => {
           <Paginator
             currentPage={page}
             onPageChange={handlePageChange}
-            totalPages={Math.ceil(ownRecipes.total / limit)}
+            totalPages={Math.ceil(ownRecipes.length / limit)}
           />
         </>
       ) : (

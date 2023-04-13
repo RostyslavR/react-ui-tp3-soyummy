@@ -37,6 +37,7 @@ export const CategoriesList = props => {
 
   const tabRef = useRef();
   const { events } = useDraggable(tabRef);
+  
   return (
     <>
       <CategoriesListWrap>

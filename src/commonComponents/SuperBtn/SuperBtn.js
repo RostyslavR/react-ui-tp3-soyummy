@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+import { theme } from '../../constants';
 
 const SuperBtn = ({
   typeBtn,
@@ -24,59 +25,59 @@ const SuperBtn = ({
     width: 100%;
     height: 100%;
     border-radius: 18px 44px;
-    font-family: inherit;
-    font-size: 12px;
-    line-height: inherit;
+    font-family: ${theme.fonts.primary};
+    font-size: ${theme.fontSizes[4]}px;
+    line-height: ${theme.lineHeights.btn};
     cursor: pointer;
-    background-color: ${color || '#8baa36'};
+    background-color: ${color || theme.colors.greenAccent};
     &:hover {
-      color: white;
-      background-color: ${hoverColor || 'grey'};
-      scale: 1.1;
+      color: ${theme.colors.primaryLightText};
+      background-color: ${hoverColor || theme.colors.darkAccent};
+      transform: scale(1.1);
     }
     @media screen and (min-width: 768px) {
-      font-size: 16px;
+      font-size: ${theme.fontSizes[5]}px;
     }
     @media screen and (min-width: 1440px) {
-      font-size: 18px;
+      font-size: ${theme.fontSizes[6]}px;
     }
     ${otln &&
     css`
-      border: 2px solid green;
-      color: black;
+      border: 2px solid ${theme.colors.greenAccent};
+      color: ${theme.colors.blackText};
       background-color: transparent;
       &:hover {
-        color: white;
-        background-color: ${color || '#8baa36'};
+        color: ${theme.colors.primaryLightText};
+        background-color: ${color || theme.colors.greenAccent};
       }
     `}
     ${otlnInv &&
     css`
-      border: 2px solid white;
+      border: 2px solid ${theme.colors.whiteText};
       background-color: transparent;
       &:hover {
-        border: 2px solid ${color || '#8baa36'};
-        color: green;
+        border: 2px solid ${color || theme.colors.greenAccent};
+        color: ${theme.colors.greenAccent};
         background-color: transparent;
       }
     `}
     ${dark &&
     css`
-      background-color: black;
+      background-color: ${theme.colors.primaryDarkText};
       &:hover {
-        background-color: ${color || '#8baa36'};
+        background-color: ${color || theme.colors.greenAccent};
       }
     `}
     ${welcome &&
     css`
       &:hover {
-        color: white;
-        background-color: black;
-        scale: 1.1;
+        color: ${theme.colors.primaryLightText};
+        background-color: ${theme.colors.primaryDarkText};
+        transform: scale(1.1);
       }
     `}
     &:hover:disabled {
-      background-color: ${hoverColor || 'grey'};
+      background-color: ${hoverColor || theme.colors.darkAccent};
     }
     ${lnk &&
     css`
@@ -88,13 +89,15 @@ const SuperBtn = ({
     css`
       border: none;
       &:disabled {
-        background-color: ${hoverColor || 'grey'};
-        color: black;
+        background-color: ${hoverColor || theme.colors.darkAccent};
+        color: ${theme.colors.blackText};
         cursor: not-allowed;
       }
     `}
-    background-color: ${lnk ? color || '#8baa36' : 'transparent'};
-    color: ${lnk ? 'white' : 'inherit'};
+    background-color: ${lnk
+      ? color || theme.colors.greenAccent
+      : 'transparent'};
+    color: ${lnk ? theme.colors.primaryLightText : 'inherit'};
   `;
 
   return (

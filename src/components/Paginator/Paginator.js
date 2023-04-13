@@ -39,6 +39,31 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
     setDisplayedPages(newDisplayedPages);
   };
 
+  // const updateDisplayedPages = page => {
+  //   const totalPagesToDisplay = 5;
+  //   const halfTotalPagesToDisplay = Math.floor(totalPagesToDisplay / 2);
+
+  //   let startPage = page - halfTotalPagesToDisplay;
+  //   if (startPage < 1) {
+  //     startPage = 1;
+  //   }
+
+  //   let endPage = startPage + totalPagesToDisplay - 1;
+  //   if (endPage > totalPages) {
+  //     endPage = totalPages;
+  //     startPage = endPage - totalPagesToDisplay + 1;
+  //     if (startPage < 1) {
+  //       startPage = 1;
+  //     }
+  //   }
+
+  //   const newDisplayedPages = [];
+  //   for (let i = startPage; i <= endPage; i++) {
+  //     newDisplayedPages.push(i);
+  //   }
+  //   setDisplayedPages(newDisplayedPages);
+  // };
+
   // const handlePrevClick = () => {
   //   if (currentPage > 1) {
   //     onPageChange(currentPage - 1);
@@ -62,10 +87,10 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   const handleNextClick = () => {
-    // if (currentPage < totalPages) {
-    onPageChange(currentPage + 1);
-    updateDisplayedPages(currentPage + 1);
-    // }
+    if (currentPage <= totalPages) {
+      onPageChange(currentPage + 1);
+      updateDisplayedPages(currentPage + 1);
+    }
   };
 
   // const handleNextClick = () => {

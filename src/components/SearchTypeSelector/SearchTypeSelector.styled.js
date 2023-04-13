@@ -8,28 +8,41 @@ export const StyledSelect = styled(Select)`
     font-family: ${props => props.theme.fonts.primary};
     font-size: ${props => props.theme.fontSizes[2]}px;
     border-radius: 5px;
+     border: 1px solid ${props => props.theme.colors.normalGrey};
     min-height: initial;
-    background-color: ${props => props.theme.colors.normalGrey};
+    background-color: ${props => props.theme.colors.normalGreySelect};
+    
     width: 146px;
     height: 34px;
     line-height: 1.5;
     cursor: pointer;
     caret-color: transparent;
+
+    :hover,
+  :focus {
+    border: 1px solid ${props => props.theme.colors.normalGrey};
   }
+  }
+
+
 
   .Select__option {
     width: 146px;
     user-select: none;
     cursor: pointer;
-    background-color: white;
-    color: black;
+    background-color:${props => props.theme.colors.lightSelector};
+    color:${props => props.theme.colors.secondaryDarkText};
     font-size: ${props => props.theme.fontSizes[2]}px;
     line-height: 1.5;
     outline: none;
     opacity: 0.5;
     &:active {
-      background-color: #e6e6e6;
+      background-color: white;
     }
+
+    :hover{
+       color: ${props => props.theme.colors.greenAccentSearch};
+     }
   }
 
   .Select__dropdown-indicator {
@@ -56,8 +69,8 @@ export const StyledSelect = styled(Select)`
     width: 146px;
     border: none;
     box-shadow: none;
-    background-color: white;
-    color: black;
+     background-color:${props => props.theme.colors.lightSelector};
+    // color:white;
     margin-top: 0;
   }
 
@@ -67,6 +80,8 @@ export const StyledSelect = styled(Select)`
 
   .Select__single-value {
     opacity: 0.5;
+     color: ${props => props.theme.colors.secondaryDarkText};
+     
   }
 
   @media screen and (min-width: 768px) {

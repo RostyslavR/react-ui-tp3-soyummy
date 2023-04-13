@@ -6,23 +6,23 @@ export const ShoppingItemContainer = styled.div`
   height: 84px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 140px;
-  margin: 0 16px 24px 0;
+
+  align-items: flex-start;
+  margin: 24px 16px;
   background-color: ${({ theme }) => theme.colors.primaryLightText};
-  
+
   border-bottom: 1px solid #e0e0e0;
-  gap: 24px;
+  /* gap: 24px; */
 
   @media screen and (min-width: 768px) {
     height: 140px;
-    margin: 0 32px;
-    gap: 44px;
-    padding-top: 44px;
+    margin: 44px 32px;
+    /* gap: 44px; */
+    /* padding-top: 44px; */
   }
 
   @media screen and (min-width: 1440px) {
-    margin: 0 140px;
+    margin: 44px 32px;
     /* padding-bottom: 42px; */
   }
 
@@ -34,22 +34,21 @@ export const ShoppingItemContainer = styled.div`
   }
 `;
 
-
 export const ProductFotoWrapper = styled.div`
-  background: '#ebf3d4';
+  background: ${({ theme }) => theme.colors.recipyLightBgItem};
   width: 60px;
   height: 60px;
   border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 
   @media screen and (min-width: 768px) {
     width: 94px;
     height: 98px;
     border-radius: 8px;
-    margin-bottom: 42px;
+    /* margin-bottom: 42px; */
   }
 `;
 
@@ -78,40 +77,49 @@ export const ProductName = styled.p`
     line-height: 24px;
   }
 `;
-  export const Box = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  `;
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 export const ProductNumber = styled.p`
   font-size: ${({ theme }) => theme.fontSizes[1]}px;
   line-height: 15px;
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
-  color: ${({ theme }) => theme.colors.primaryLightText};
-  width: 38px;
+  color: ${({ theme }) => theme.colors.primaryLightTextNoChange};
+  /* width: 56px; */
   height: 24px;
-  margin-right: 50px;
+  margin-right: 40px;
   text-align: center;
   background: ${({ theme }) => theme.colors.greenAccent};
   border-radius: ${({ theme }) => theme.radii.m};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 61px;
+  /* margin-bottom: 61px; */
+  min-width: 56 px;
+  width: auto;
+
+  padding: 0 8px;
+  white-space: normal; /* Allow line breaks */
 
   @media screen and (min-width: 768px) {
     width: 68px;
     height: 35px;
-    margin-right: 114px;
+    margin-right: 90px;
     font-size: 18px;
     line-height: 27px;
-    margin-bottom: 105px;
+    min-width: 68 px;
+    width: auto;
+
+    padding: 0 16px;
+    white-space: normal; /* Allow line breaks */
   }
 
   @media screen and (min-width: 1440px) {
     margin-right: 178px;
-    margin-bottom: 105px;
+    /* margin-bottom: 105px; */
   }
 `;
 export const RemoveItemButton = styled.button`
@@ -121,33 +129,32 @@ export const RemoveItemButton = styled.button`
   border: none;
   cursor: pointer;
   background: transparent;
-  margin-right: 38px;
-  margin-bottom: 73px;
+  margin-right: 18px; // 38-8
 
   @media screen and (min-width: 768px) {
     /* tablet size */
-    margin-right: 80px;
-    margin-bottom: 124px;
+    margin-right: 42px; // 80-32
+
     width: 12px;
     height: 12px;
   }
 
   @media screen and (min-width: 1440px) {
-    margin-right: 172px;
-    margin-bottom: 124px;
+    margin-right: 72px; //172 -100
   }
 `;
-
 
 export const RemoveIconWrapper = styled(RemoveIcon)`
   width: 8px;
   height: 8px;
-  fill: ${({ theme }) => theme.colors.primaryDarkText};
- 
+  fill: ${({ theme }) => theme.colors.blackCloseIconToWhite};
+  stroke: ${({ theme }) => theme.colors.blackCloseIconToWhite};
   @media screen and (min-width: 768px) {
     width: 12px;
     height: 12px;
   }
 `;
 
- 
+export const BoxButton = styled.div`
+  display: flex;
+`;

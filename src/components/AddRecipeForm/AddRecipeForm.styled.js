@@ -157,7 +157,7 @@ export const Label = styled.div`
 `;
 
 export const Ubox = styled.div`
-  width: 70px;
+  width: 100px;
 `;
 
 export const Dbox = styled.div`

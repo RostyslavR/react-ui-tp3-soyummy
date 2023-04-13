@@ -41,7 +41,7 @@ export const FoterBox = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
   padding-top: 28px;
   padding-bottom: 20px;
   @media screen and (min-width: 768px) {
@@ -106,7 +106,7 @@ export const TitleText = styled.h2`
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0.015em;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
@@ -125,7 +125,7 @@ export const DescriptionItem = styled.li`
   line-height: 1.28;
   letter-spacing: -0.02em;
   margin-left: 20px;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
   &:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -167,7 +167,7 @@ export const Styledlink = styled(NavLink)`
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
   &:hover,
   :focus {
     color: ${p => p.theme.colors.greenAccent};
@@ -195,7 +195,7 @@ export const SubscribeTitle = styled.h3`
   font-weight: 700;
   font-size: 18px;
   line-height: 1.5;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
   margin-bottom: 14px;
 `;
 export const SubscribeText = styled.p`
@@ -203,7 +203,7 @@ export const SubscribeText = styled.p`
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
 
   margin-bottom: 28px;
 `;
@@ -244,12 +244,12 @@ export const Icon = styled.img`
 export const Input = styled.input`
   width: 204px;
   height: 38px;
-  border: 1px solid ${p => p.theme.colors.primaryLightText};
+  border: 1px solid ${p => p.theme.colors.primaryLightTextNoChange};
   border-radius: 6px;
   outline: rgba(0, 0, 0, 0.2);
   background-color: transparent;
   justify-content: center;
-  color: ${p => p.theme.colors.primaryLightText};
+  color: ${p => p.theme.colors.primaryLightTextNoChange};
   font-size: 10px;
   line-height: 1.5;
   padding-left: 42px;
@@ -258,7 +258,7 @@ export const Input = styled.input`
     font-size: 10px;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    color: ${p => p.theme.colors.primaryLightText};
+    color: ${p => p.theme.colors.primaryLightTextNoChange};
   }
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -267,7 +267,8 @@ export const Input = styled.input`
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    -webkit-text-fill-color: ${p => p.theme.colors.primaryLightText} !important;
+    -webkit-text-fill-color: ${p =>
+      p.theme.colors.primaryLightTextNoChange} !important;
     caret-color: white;
   }
 
@@ -312,7 +313,7 @@ export const Btn = styled.button`
   margin-bottom: 44px;
 
   &:valid {
-    color: ${p => p.theme.colors.primaryLightText};
+    color: ${p => p.theme.colors.primaryLightTextNoChange};
   }
 
   &:hover:valid,

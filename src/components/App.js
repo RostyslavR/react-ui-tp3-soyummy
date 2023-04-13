@@ -1,23 +1,23 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
-import { ToastContainer } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
 
-import { RestrictedRoute, PrivateRoute } from "service/routes";
+import { RestrictedRoute, PrivateRoute } from 'service/routes';
 
-import { SharedLayout } from "./SharedLayout";
-import { MainPage } from "pages/MainPage";
-import { CategoriesPage } from "pages/CategoriesPage";
-import { AddRecipePage } from "pages/AddRecipePage";
-import { FavoritePage } from "pages/FavoritePage";
-import { MyRecipesPage } from "pages/MyRecipesPage";
-import { RecipePage } from "pages/RecipePage";
-import SearchPage from "../pages/SearchPage/SearchPage";
-import ShoppingListPage from "pages/ShoppingListPage/ShoppingListPage";
-import { NotFoundPage } from "pages/NotFoundPage";
-import { WelcomePage } from "pages/WelcomePage";
-import { AuthPage } from "pages/AuthPage";
+import { SharedLayout } from './SharedLayout';
+import { MainPage } from 'pages/MainPage';
+import { CategoriesPage } from 'pages/CategoriesPage';
+import { AddRecipePage } from 'pages/AddRecipePage';
+import { FavoritePage } from 'pages/FavoritePage';
+import { MyRecipesPage } from 'pages/MyRecipesPage';
+import { RecipePage } from 'pages/RecipePage';
+import SearchPage from '../pages/SearchPage/SearchPage';
+import ShoppingListPage from 'pages/ShoppingListPage/ShoppingListPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import { WelcomePage } from 'pages/WelcomePage';
+import { AuthPage } from 'pages/AuthPage';
 
-import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from './GlobalStyle';
 
 // const AuthPage = lazy(() => import('pages/AuthPage/AuthPage'));
 // const MainPage = lazy(() => import('pages/MainPage/MainPage'));

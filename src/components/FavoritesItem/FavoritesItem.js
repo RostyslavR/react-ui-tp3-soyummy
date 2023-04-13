@@ -1,3 +1,5 @@
+import { theme } from '../../constants'; // replace "./colors" with the correct path to the colors file
+
 import SuperBtn from 'commonComponents/SuperBtn/SuperBtn';
 import { ButtonDel } from 'commonComponents/ButtonDelete/ButtonDelete';
 import { useLocation } from 'react-router-dom';
@@ -31,18 +33,18 @@ export const FavoritesItem = ({
           <FavoriteDeleteBtn>
             <ButtonDel
               handleDelete={handleDelete}
-              bgColor="#EBF3D4"
-              hoverColor="#8baa36"
-              iconColor="black"
-              iconHoverColor="white"
+              bgColor={p => p.theme.colors.secondaryAccent}
+              hoverColor={theme.colors.greenAccent}
+              iconColor={p => p.theme.colors.iconDarkColor}
+              iconHoverColor={p => p.theme.colors.primaryLightTextNoChange}
             />
           </FavoriteDeleteBtn>
           <FavoriteDescription>{description}</FavoriteDescription>
           <FavoriteTime>{time} min</FavoriteTime>
           <FavoriteSeeBtn>
             <SuperBtn
-              color="#22252A"
-              hoverColor="#8baa36"
+              hoverColor={p => p.theme.colors.buttoHoverColor}
+              color={p => p.theme.colors.buttonColor}
               title="See recipe"
               lnk
               to={`/recipe/${id}`}

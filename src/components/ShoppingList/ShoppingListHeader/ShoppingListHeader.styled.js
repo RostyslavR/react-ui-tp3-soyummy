@@ -4,8 +4,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  margin: 50px 8px 32px 8px;
+  margin: 0 8px 32px 8px;
   background-color: ${props => props.theme.colors.greenAccent};
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -16,6 +15,8 @@ export const HeaderWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     margin: 50px 8px 32px 8px;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -43,7 +44,7 @@ export const NumberHeader = styled.div`
   @media screen and (min-width: 768px) {
     line-height: 26px;
 
-    margin: 16px 0 16px 16px;
+    margin: 16px 0;
     gap: 78px;
   }
 
@@ -71,7 +72,6 @@ export const NumberProductWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 10px 10px 10px 0px;
   margin-left: auto;
   gap: 24px;
   line-height: 28px;

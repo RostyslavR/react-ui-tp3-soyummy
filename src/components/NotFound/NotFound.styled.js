@@ -38,13 +38,12 @@ export const Alert = styled.div`
 `;
 
 export const AlertContainer = styled.div`
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: ${props => props.theme.colors.blackText};
+  color: ${props => props.theme.colors.blackTextToWhite};
   width: 206px;
   margin-bottom: 100px;
   @media screen and (min-width: 768px) {
@@ -53,7 +52,6 @@ export const AlertContainer = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-
   }
 `;
 

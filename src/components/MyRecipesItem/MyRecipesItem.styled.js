@@ -8,7 +8,8 @@ export const CardItem = styled.li`
   width: 343px;
   height: 152px;
   border-radius: 8px;
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  background-color: ${p => p.theme.colors.whiteBackgroundToBlack};
   box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.3);
   @media screen and (min-width: 768px) {
     width: 704px;
@@ -60,7 +61,8 @@ export const TitleRecipe = styled(Link)`
   font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  // color: #3e4462;
+  color: ${p => p.theme.colors.secondaryDarkText};
   @media screen and (min-width: 768px) {
     font-size: 24px;
   }
@@ -89,7 +91,8 @@ export const Text = styled.p`
   font-size: 8px;
   line-height: 10px;
   letter-spacing: -0.02em;
-  color: #23262a;
+  // color: #23262a;
+  color: ${p => p.theme.colors.primaryDarkText};
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 18px;
@@ -105,7 +108,8 @@ export const Time = styled.p`
   font-size: 10px;
   line-height: 14px;
   letter-spacing: -0.24px;
-  color: #3e4462;
+  // color: #3e4462;
+  color: ${p => p.theme.colors.secondaryDarkText};
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 20px;

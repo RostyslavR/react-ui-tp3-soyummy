@@ -4,7 +4,7 @@ export const DishList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-top: 32px;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
 
   width: 100%;
   margin-left: auto;
@@ -16,14 +16,14 @@ export const DishList = styled.ul`
     width: 704px;
     gap: 32px;
     margin-top: 50px;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
   };
   @media screen and (min-width: 1440px) {
     width: 100%;
     row-gap: 100px;
     column-gap: 12px;
     margin-top: 50px;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
   }
 `;
 

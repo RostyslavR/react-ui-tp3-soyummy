@@ -31,6 +31,7 @@ const ControlBox = styled.div`
   border-radius: 20px;
   color: ${({ theme: { colors } }) => colors.greenAccent};
   border-color: ${({ theme: { colors } }) => colors.greenAccent};
+  user-select: none;
 
   @media (min-width: ${({ theme: { devices } }) => devices.tablet}) {
     width: 110px;

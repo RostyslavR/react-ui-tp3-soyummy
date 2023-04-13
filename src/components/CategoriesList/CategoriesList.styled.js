@@ -17,7 +17,7 @@ export const CategoriesListWrap = styled.div`
 
   @media screen and (min-width: 1440px) {
     max-width: 1240px;
-    margin-top: 50px;
+    margin-top: 40px;
   } ;
 `;
 

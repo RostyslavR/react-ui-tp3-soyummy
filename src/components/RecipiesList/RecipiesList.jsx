@@ -7,7 +7,7 @@ export const RecipiesList = ({ categoryId }) => {
   const {
     data: recipes,
     error,
-    isFetching,
+    isLoading,
     isError,
   } = useRecipes({ category: categoryId });
 
@@ -17,7 +17,7 @@ export const RecipiesList = ({ categoryId }) => {
 
   return (
     <>
-      {isFetching && <Loader />}
+      {isLoading && <Loader />}
       {recipes && (
         <DishList>
           {recipes?.map(({ _id: id, title, thumb }) => (

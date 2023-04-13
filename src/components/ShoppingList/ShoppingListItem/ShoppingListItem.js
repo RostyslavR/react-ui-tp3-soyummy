@@ -7,7 +7,7 @@ import {
   ShoppingItemContainer,
   ProductFotoWrapper,
   RemoveIconWrapper,
-  // Box
+  BoxButton,
 } from './ShoppingListItem.styled';
 
 import { Loader } from 'components/Loader';
@@ -24,8 +24,8 @@ export const ShoppingListItem = ({ ids, name, sum, unit, image }) => {
   };
 
   return (
-    <ShoppingItemContainer>
-      <li>
+    <li>
+      <ShoppingItemContainer>
         <ProductFotoWrapper>
           <ProductFoto src={image} alt={name} />
         </ProductFotoWrapper>
@@ -34,6 +34,7 @@ export const ShoppingListItem = ({ ids, name, sum, unit, image }) => {
 
         {/* <Box> */}
         <ProductNumber>{`${sum} ${unit}`}</ProductNumber>
+        <BoxButton>
         <RemoveItemButton
           type="button"
           // id={ids}
@@ -42,8 +43,8 @@ export const ShoppingListItem = ({ ids, name, sum, unit, image }) => {
         >
           {isLoading ? <Loader /> : <RemoveIconWrapper />}
         </RemoveItemButton>
-        {/* </Box> */}
-      </li>
-    </ShoppingItemContainer>
+      </BoxButton>
+      </ShoppingItemContainer>
+    </li>
   );
 };

@@ -31,10 +31,12 @@ const queryClient = new QueryClient({
     },
   },
   queryCache: new QueryCache({
-    onError: (axiosError) => handleErrors({ axiosError, store, queryClient }),
+    onError: (axiosError) =>
+      handleErrors({ axiosError, store, queryClient, baseURL: "" }),
   }),
   mutationCache: new MutationCache({
-    onError: (axiosError) => handleErrors({ axiosError, store, queryClient }),
+    onError: (axiosError) =>
+      handleErrors({ axiosError, store, queryClient, baseURL: "" }),
   }),
 });
 

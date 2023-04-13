@@ -162,7 +162,7 @@ const OptionsList = styled.ul`
   top: 38px;
   left: 0;
   z-index: 1;
-  max-height: 200px;
+  max-height: 180px;
   width: 100%;
   overflow: auto;
   list-style-type: none;

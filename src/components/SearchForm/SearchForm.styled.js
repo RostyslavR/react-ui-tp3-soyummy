@@ -27,6 +27,19 @@ export const SearchInput = styled.input`
   border: 1px solid #f0f0f0;
   border-radius: 60px 120px 60px 120px;
   outline: none;
+  background-color: ${props => props.theme.colors.primaryLightText};
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px ${p => p.theme.colors.primaryLightText} inset !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-text-fill-color: ${p =>
+      p.theme.colors.footerRightsReserved} !important;
+    caret-color: white;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: ${props => props.theme.fontSizes[4]}px;
@@ -50,17 +63,22 @@ export const SearchButton = styled.button`
   font-size: ${props => props.theme.fontSizes[4]}px;
   line-height: 21px;
   cursor: pointer;
-  color: ${props => props.theme.colors.primaryLightText};
-  background: ${props => props.color};
+  color: ${props => props.theme.colors.lightBackground};
+  background-color: ${props => props.color};
 
-  //background: ${props => props.theme.colors.greenAccent},
   border: 1px solid #f0f0f0;
   border-radius: 60px 120px 60px 120px;
+   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: ${props =>
-      props.color === '#8baa36' ? '#22252a' : '#8baa36'};
+      props.color === props.theme.colors.greenAccent
+        ? props.theme.colors.quaternaryDarkText
+        : props.theme.colors.greenAccentSearch};
+        transform: scale(1.05);
   }
+
+  
 
   @media screen and (min-width: 768px) {
     font-size: ${props => props.theme.fontSizes[5]}px;
@@ -73,14 +91,7 @@ export const SearchButton = styled.button`
     width: 161px;
     height: 70px;
 
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-
-    :hover {
-      box-shadow: ${props =>
-        props.color === '#8baa36'
-          ? '0 0 40px 40px #22252a inset'
-          : '0 0 40px 40px #8baa36 inset'};
+    
     }
   }
 `;

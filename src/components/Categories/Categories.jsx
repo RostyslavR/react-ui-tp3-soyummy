@@ -1,12 +1,14 @@
 import { useCategories } from '../../api/hooks';
 import { useParams } from 'react-router-dom';
-import { Container } from 'components/Container/Container';
+// import { Container } from 'components/Container/Container';
 import { CategoriesList } from 'components/CategoriesList/CategoriesList';
-
 import { RecipiesList } from 'components/RecipiesList/RecipiesList';
 import { Loader } from 'components/Loader/Loader';
-import { SectionTitle, Spinach } from './Categories.styled';
-import { TopBox } from 'commonComponents/TopBox';
+import {SectionWrapper} from './Categories.styled';
+// import { SectionTitle, 
+//   // Spinach, 
+// } from './Categories.styled';
+// import { TopBox } from 'commonComponents/TopBox';
 
 export const Categories = () => {
   const { categoryName = 'Beef' } = useParams();
@@ -34,15 +36,14 @@ export const Categories = () => {
 
   return (
     <div>
-      <Container>
-        <TopBox />
-        <SectionTitle>Categories</SectionTitle>
-
+      <SectionWrapper>
+        {/* <TopBox /> */}
+        {/* <SectionTitle>Categories</SectionTitle> */}
         <CategoriesList value={categoryName} categories={categories} />
 
         <RecipiesList categoryId={category._id} />
-        <Spinach/>
-      </Container>
+        {/* <Spinach/> */}
+      </SectionWrapper>
     </div>
   );
 };
