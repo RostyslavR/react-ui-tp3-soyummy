@@ -32,7 +32,6 @@ export const ShoppingListItem = ({ ids, name, sum, unit, image }) => {
 
         <ProductName>{name}</ProductName>
 
-        {/* <Box> */}
         <ProductNumber>{`${sum} ${unit}`}</ProductNumber>
         <BoxButton>
         <RemoveItemButton

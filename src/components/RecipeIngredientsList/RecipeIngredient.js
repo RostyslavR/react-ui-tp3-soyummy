@@ -2,7 +2,7 @@ import { useDeleteShoppingList } from 'api/hooks';
 import { useAddShoppingList } from 'api/hooks';
 import { useState } from 'react';
 import {
-  IngedientsItemLi,
+  IngedientsItemList,
   IngedientsImg,
   Wrap,
   IngedientsTitle,
@@ -30,7 +30,7 @@ export const RecipeIngredient = ({ ingredient, isSelected, recipeId }) => {
     }
   }
   return (
-    <IngedientsItemLi>
+    <IngedientsItemList>
       <Wrap>
         {<IngedientsImg src={thb ? thb : ''} alt="Ingredient" />}
         <IngedientsTitle>{ttl}</IngedientsTitle>
@@ -46,6 +46,6 @@ export const RecipeIngredient = ({ ingredient, isSelected, recipeId }) => {
           <CheckBoxWrap>{isSelected && <CheckMarkIcon />}</CheckBoxWrap>
         </CheckBoxLabel>
       </Wrap>
-    </IngedientsItemLi>
+    </IngedientsItemList>
   );
 };

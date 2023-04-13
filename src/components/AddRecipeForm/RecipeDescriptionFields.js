@@ -1,17 +1,7 @@
 import { useCategories } from 'api/hooks';
 import { VBox, InputForm, LabelBox, Label, Dbox } from './AddRecipeForm.styled';
 import { AutoInput } from './AutoInput';
-
-const times = [
-  { t: '5' },
-  { t: '10' },
-  { t: '15' },
-  { t: '20' },
-  { t: '30' },
-  { t: '40' },
-  { t: '50' },
-  { t: '60' },
-];
+import { times } from '../../constants/times';
 
 export const RecipeDescriptionFields = ({
   handleFormData,

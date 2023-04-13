@@ -8,14 +8,13 @@ import { SigninForm } from '../../components/SigninForm/SigninForm';
 import { RegisterForm } from '../../components/RegisterForm/RegisterForm';
 import { SIGNIN_TYPE } from '../../constants/form';
 import { StyledAuthPage, PersonImg, AuthFlex, FormLinkWraper, AuthInn } from './AuthPage.styled';
-// import {Container} from '../../commonComponents/Container'
+// import { MotivatingModal } from '../../components/MotivatingModal/MotivatingModal';
 
 
 
 
 export const AuthPage = ({ type }) => {
   return (
-  //  <Container>
     <StyledAuthPage>
       <AuthInn className="inn">
         <AuthFlex >
@@ -37,7 +36,7 @@ export const AuthPage = ({ type }) => {
          </FormLinkWraper>
         </AuthFlex>
       </AuthInn>
+      {/* <MotivatingModal/> */}
       </StyledAuthPage>
-  // </Container>
   );
 };

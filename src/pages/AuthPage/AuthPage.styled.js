@@ -1,7 +1,29 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import BlackBgrDesk from '../../assets/images/authPageBlack.png'
 import BlackBgrTablet from '../../assets/images/authPageBlackTablet.png'
 import BlackBgrMobile from '../../assets/images/authPageBlackMobile.png'
+
+const slideInLeft = keyframes`
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideInRight = keyframes`
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 export const StyledAuthPage = styled.div`
   width: 100%;
@@ -43,6 +65,7 @@ export const AuthFlex = styled.div`
 `;
 
 export const PersonImg = styled.picture`
+animation: ${slideInLeft} 1s cubic-bezier(.36,.25,.32,1.42)forwards;
 position: relative;
 z-index: 10;
 display: flex;
@@ -64,6 +87,7 @@ height: 250px;
 `;
 
 export const FormLinkWraper = styled.div`
+animation: ${slideInRight} 1s cubic-bezier(.36,.25,.32,1.42) forwards;
 position: relative;
 bottom: 29px;
 z-index: 10;

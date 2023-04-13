@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as RemoveIcon } from 'images/commonSvgImg/Icon_close.svg';
-// import { style } from '@mui/system';
+
 
 export const ShoppingItemContainer = styled.div`
   height: 84px;
@@ -12,18 +12,17 @@ export const ShoppingItemContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryLightText};
 
   border-bottom: 1px solid #e0e0e0;
-  /* gap: 24px; */
+
 
   @media screen and (min-width: 768px) {
     height: 140px;
     margin: 44px 32px;
-    /* gap: 44px; */
-    /* padding-top: 44px; */
+
   }
 
   @media screen and (min-width: 1440px) {
     margin: 44px 32px;
-    /* padding-bottom: 42px; */
+ 
   }
 
   li {
@@ -42,13 +41,13 @@ export const ProductFotoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 24px; */
+
 
   @media screen and (min-width: 768px) {
     width: 94px;
     height: 98px;
     border-radius: 8px;
-    /* margin-bottom: 42px; */
+
   }
 `;
 
@@ -88,7 +87,6 @@ export const ProductNumber = styled.p`
   line-height: 15px;
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
   color: ${({ theme }) => theme.colors.primaryLightTextNoChange};
-  /* width: 56px; */
   height: 24px;
   margin-right: 40px;
   text-align: center;
@@ -97,7 +95,7 @@ export const ProductNumber = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 61px; */
+
   min-width: 56 px;
   width: auto;
 

@@ -36,8 +36,10 @@ export const SigninForm = () => {
   const { emailError, passwordError } = signInErrors;
 
   const { mutate } = useSignIn();
-
+  
+ 
   const handleSignIn = () => {
+
     const errors = validateFormFields(signInData);
 
     if (!isNil(errors)) {
@@ -46,6 +48,8 @@ export const SigninForm = () => {
 
     setSignInErrors(SIGNIN_DEFAULT_ERROR_STATE);
     mutate({ email, password });
+
+
   };
 
   return (
@@ -68,9 +72,10 @@ export const SigninForm = () => {
                 value={email}
                 placeholder="Email"
                 autoComplete="new-email"
-                onChange={e =>
-                  setSignInData({ ...signInData, email: e.target.value })
-                }
+                onChange={e =>{
+                  setSignInData({ ...signInData, email: e.target.value });
+                  setSignInErrors(SIGNIN_DEFAULT_ERROR_STATE);
+                }}
               />
             </InputLabel>
             {emailError && <ErrorText>{emailError}</ErrorText>}
@@ -87,10 +92,9 @@ export const SigninForm = () => {
                 name="password"
                 placeholder="Password"
                 onChange={e => {
-                  console.log(e.target.value)
-                  setSignInData({ ...signInData, password: e.target.value })
-                }
-                }
+                  setSignInData({ ...signInData, password: e.target.value });
+                  setSignInErrors(SIGNIN_DEFAULT_ERROR_STATE);
+                }}
               />
             </InputLabel>
             {passwordError && (

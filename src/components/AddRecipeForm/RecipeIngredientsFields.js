@@ -2,15 +2,7 @@ import { InputForm, IngredBox, Ubox } from './AddRecipeForm.styled';
 import { AutoInput } from './AutoInput';
 
 import { handleKeyPress } from './lib';
-
-const units = [
-  { t: 'g' },
-  { t: 'kg' },
-  { t: 'liter' },
-  { t: 'ml' },
-  { t: 'tbs' },
-  { t: 'tsp' },
-];
+import { units } from '../../constants/units';
 
 export const RecipeIngredientsFields = ({
   idx,

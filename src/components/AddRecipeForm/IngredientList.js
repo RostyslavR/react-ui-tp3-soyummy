@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { RecipeIngredientsFields } from './RecipeIngredientsFields';
-import iconClose from 'images/commonSvgImg/Icon_close.svg';
+import iconClose from 'images/commonSvgImg/cross.svg';
 
 export const IngredientList = ({
   ingredientList,
@@ -66,7 +66,7 @@ const ListItem = styled.li`
 `;
 
 const Close = styled.img`
-  width: 10px;
+  width: 14px;
   margin-left: 33px;
   /* height: auto; */
   /* border-radius: 50%; */

@@ -64,7 +64,7 @@ export const NoRecipesText = styled.p`
   letter-spacing: -0.02em;
   margin-bottom: 101px;
   // opacity: 0.5;
-  color: black;
+ color: ${props => props.theme.colors.blackTextToWhite};
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

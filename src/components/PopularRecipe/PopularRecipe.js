@@ -20,13 +20,15 @@ export const PopularRecipe = () => {
     <>
       <SectionTitle>Popular recipe</SectionTitle>
       <ListBox>
-        {isLoading && <Loader />}
-        {!isLoading && (
+        {isLoading ? (
+          <Loader />
+        ) : (
           <>
-            {isTablet &&
-              data?.slice(0, 2).map(item => <Item key={item._id} {...item} />)}
-            {!isTablet &&
-              data?.slice(0, 4).map(item => <Item key={item._id} {...item} />)}
+            {isTablet
+              ? data?.slice(0, 2).map(item => <Item key={item._id} {...item} />)
+              : data
+                  ?.slice(0, 4)
+                  .map(item => <Item key={item._id} {...item} />)}
           </>
         )}
       </ListBox>

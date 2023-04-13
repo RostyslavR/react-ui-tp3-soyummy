@@ -15,6 +15,10 @@ export const Button = styled.button`
   height: 46px;
   font-size: 16px;
 
+  &:hover {
+    background-color: ${({ theme: { colors } }) => colors.greenAccentSearch};
+  }
+
   ${({ largeButton }) =>
     largeButton &&
     `

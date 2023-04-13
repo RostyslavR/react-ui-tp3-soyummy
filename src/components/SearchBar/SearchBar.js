@@ -7,6 +7,7 @@ import SearchTypeSelector from 'components/SearchTypeSelector/SearchTypeSelector
 import {
   WrapperSearchBar,
   WrapperSelector,
+  WrapperPaginator,
   SearchBy,
 } from './SearchBar.styled';
 import { Loader } from 'components/Loader';
@@ -36,16 +37,6 @@ export const SearchBar = () => {
 
   const theme = useTheme();
   const color = theme.colors.greenAccent;
-
-  // console.log(data);
-  // console.log(isLoading);
-  // useEffect(() => {
-  //   if (!data || data.length === 0) {
-  //     toast('Not found recipes! Try again!');
-  //   } else {
-  //     setRecipes(data);
-  //   }
-  // }, [data]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -83,15 +74,15 @@ export const SearchBar = () => {
         </WrapperSelector>
       </WrapperSearchBar>
       {isLoading && <Loader />}
-      {data && (
-        <>
-          <SearchedRecipesList items={data} />
+      {data && <SearchedRecipesList items={data} />}
+      {data && data.length !== 0 && (
+        <WrapperPaginator>
           <Paginator
             currentPage={page}
             onPageChange={handlePageChange}
-            totalPages={Math.ceil(data.total / limit)}
+            totalPages={Math.ceil(data.length / limit)}
           />
-        </>
+        </WrapperPaginator>
       )}
     </>
   );

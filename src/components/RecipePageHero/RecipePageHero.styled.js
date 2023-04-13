@@ -43,8 +43,9 @@ export const SectionHero = styled.section`
 
 export const SectionHeroTitle = styled.h1`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[3]};
+  font-size: ${props => props.theme.fontSizes[44]};
   color: ${props => props.theme.colors.greenAccent};
+  fonts-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 1;
   max-width: 360px;
   margin-right: auto;
@@ -58,6 +59,7 @@ export const SectionHeroTitle = styled.h1`
 `;
 
 export const SectionHeroDesc = styled.p`
+  color: #22252a;
   max-width: 300px;
   margin-right: auto;
   margin-left: auto;
@@ -108,6 +110,7 @@ export const TimeBlock = styled.div`
 `;
 
 export const TimeText = styled.span`
+  color: #23262a;
   font-size: 10px;
   line-height: 1.4;
   margin-left: 4px;

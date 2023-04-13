@@ -8,7 +8,7 @@ export const DishList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-top: ${props => (props.isEmpty ? '50px' : '42px')};
-  margin-bottom: 50px;
+
   // min-height: 746px;
   width: 375px;
   margin-left: auto;
@@ -21,14 +21,12 @@ export const DishList = styled.ul`
     width: 768px;
     gap: 32px;
     margin-top: ${props => (props.isEmpty ? '50px' : '40px')};
-    margin-bottom: 50px;
   }
   @media screen and (min-width: 1440px) {
     width: 1440px;
     row-gap: 100px;
     column-gap: 14px;
     margin-top: ${props => (props.isEmpty ? '50px' : '90px')};
-    margin-bottom: 200px;
   }
 `;
 export const DishItem = styled.li`
@@ -40,6 +38,7 @@ export const DishItem = styled.li`
 export const DefaultImageContainer = styled.div`
   width: 208px;
   height: 133px;
+  margin-bottom: 24px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -49,6 +48,7 @@ export const DefaultImageContainer = styled.div`
     width: 350px;
     height: 225px;
     background-image: url(${bucket_veggies_tab_1x});
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -59,10 +59,14 @@ export const DefaultImageContainer = styled.div`
 `;
 
 export const WrapperLookingFor = styled.span`
+  display: inline-block;
   font-size: ${props => props.theme.fontSizes[3]}px;
   color: ${props => props.theme.colors.blackText};
   opacity: 0.5;
+  margin-bottom: 100px;
+
   @media screen and (min-width: 768px) {
     font-size: ${props => props.theme.fontSizes[7]}px;
+    margin-bottom: 200px;
   }
 `;

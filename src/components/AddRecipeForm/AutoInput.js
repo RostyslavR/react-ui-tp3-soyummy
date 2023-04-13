@@ -175,7 +175,7 @@ const OptionsList = styled.ul`
   font-weight: ${({ theme: { fontWeights } }) => fontWeights.regular};
   color: ${({ theme: { colors } }) => colors.primaryDarkText};
 
-  background-color: ${({ theme: { colors } }) => colors.whiteBackgroundToBlack};
+  background-color: ${({ theme: { colors } }) => colors.lightSelector};
   /* border: 1px solid #ccc; */
 
   border: none;
@@ -193,7 +193,7 @@ const Option = styled.li`
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme: { colors } }) => colors.greenAccent};
+    color: ${({ theme: { colors } }) => colors.greenAccentSearch};
     color: opacity 1;
     /* background-color: #eee; */
   }

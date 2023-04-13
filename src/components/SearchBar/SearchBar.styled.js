@@ -13,6 +13,26 @@ export const WrapperSelector = styled.div`
   margin-top: 28px;
 `;
 
+export const WrapperPaginator = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 343px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 336px;
+    margin-top: 30px;
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1240px;
+  }
+`;
+
 export const SearchBy = styled.span`
   font-size: ${props => props.theme.fontSizes[2]}px;
   @media screen and (min-width: 768px) {

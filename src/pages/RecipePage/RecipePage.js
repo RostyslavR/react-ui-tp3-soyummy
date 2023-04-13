@@ -29,11 +29,6 @@ export const RecipePage = () => {
       preview,
     } = recipe.data;
 
-    console.log(recipe.data._id);
-    console.log(recipe.data.isFavorite);
-    console.log(recipe.data.preview);
-    console.log(recipe.data);
-
     return (
       <>
         <RecipePageHero

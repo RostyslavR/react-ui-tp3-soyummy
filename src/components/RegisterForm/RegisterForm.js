@@ -69,8 +69,10 @@ export const RegisterForm = () => {
                 value={name}
                 placeholder="Name"
                 // autoComplete="new-email"
-                onChange={e =>
-                  setSignUpData({ ...signUpData, name: e.target.value })
+                  onChange={e => {
+                    setSignUpData({ ...signUpData, name: e.target.value });
+                    setSignUpErrors(SIGNUP_DEFAULT_ERROR_STATE);
+                  }
                 }
               />
             </InputLabel>
@@ -88,8 +90,10 @@ export const RegisterForm = () => {
                 value={email}
                 placeholder="Email"
                 autoComplete="new-email"
-                onChange={e =>
-                  setSignUpData({ ...signUpData, email: e.target.value })
+                  onChange={e => {
+                    setSignUpData({ ...signUpData, email: e.target.value });
+                    setSignUpErrors(SIGNUP_DEFAULT_ERROR_STATE);
+                  }
                 }
               />
             </InputLabel>
@@ -107,8 +111,8 @@ export const RegisterForm = () => {
                 name="password"
                 placeholder="Password"
                 onChange={e => {
-                  console.log(e.target.value)
-                  setSignUpData({ ...signUpData, password: e.target.value })
+                  setSignUpData({ ...signUpData, password: e.target.value });
+                  setSignUpErrors(SIGNUP_DEFAULT_ERROR_STATE);
                 }
                 }
               />
