@@ -1,0 +1,1 @@
+export { RecipePreparation } from './RecipePreparation';
