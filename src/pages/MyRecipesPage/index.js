@@ -1,1 +1,0 @@
-export { MyRecipesPage } from './MyRecipesPage';

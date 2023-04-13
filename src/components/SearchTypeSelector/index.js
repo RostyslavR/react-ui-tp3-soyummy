@@ -1,1 +1,0 @@
-export { SearchTypeSelector } from './SearchTypeSelector';

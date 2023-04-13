@@ -1,1 +1,0 @@
-export { MotivatingModal } from './MotivatingModal';

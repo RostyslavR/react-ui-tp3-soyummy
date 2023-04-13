@@ -1,1 +1,0 @@
-export { RecipePreparation } from './RecipePreparation';

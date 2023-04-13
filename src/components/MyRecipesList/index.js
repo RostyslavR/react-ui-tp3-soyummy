@@ -1,1 +1,0 @@
-export { MyRecipesList } from './MyRecipesList';

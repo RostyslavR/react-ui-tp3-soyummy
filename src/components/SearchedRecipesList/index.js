@@ -1,1 +1,0 @@
-export { SearchedRecipesList } from './SearchedRecipesList';
