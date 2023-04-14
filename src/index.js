@@ -20,7 +20,7 @@ import { handleErrors } from "api/helpers";
 import "./index.css";
 import { CustomThemeProvider } from "components/CustomThemeProvider/CustomThemeProvider";
 
-// const baseURL = '/command_project_React_Node';
+// const baseURL = "/command_project_React_Node";
 const baseURL = "";
 
 const queryClient = new QueryClient({

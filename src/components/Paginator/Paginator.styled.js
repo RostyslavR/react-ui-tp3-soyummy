@@ -35,6 +35,7 @@ export const PaginationButton = styled.button`
   &:disabled {
     opacity: 0.5;
     cursor: default;
+    color: black;
   }
 `;
 

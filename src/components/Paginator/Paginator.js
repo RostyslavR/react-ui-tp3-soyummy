@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import {
   PaginationContainer,
@@ -7,7 +7,15 @@ import {
 } from './Paginator.styled';
 
 export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
-  const [displayedPages, setDisplayedPages] = useState([1, 2, 3]);
+  const [displayedPages, setDisplayedPages] = useState([]);
+
+  useEffect(() => {
+    const newDisplayedPages = [];
+    for (let i = 1; i <= totalPages; i++) {
+      newDisplayedPages.push(i);
+    }
+    setDisplayedPages(newDisplayedPages);
+  }, [totalPages]);
 
   const handlePageClick = page => {
     onPageChange(page);
@@ -39,46 +47,6 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
     setDisplayedPages(newDisplayedPages);
   };
 
-  // const updateDisplayedPages = page => {
-  //   const totalPagesToDisplay = 5;
-  //   const halfTotalPagesToDisplay = Math.floor(totalPagesToDisplay / 2);
-
-  //   let startPage = page - halfTotalPagesToDisplay;
-  //   if (startPage < 1) {
-  //     startPage = 1;
-  //   }
-
-  //   let endPage = startPage + totalPagesToDisplay - 1;
-  //   if (endPage > totalPages) {
-  //     endPage = totalPages;
-  //     startPage = endPage - totalPagesToDisplay + 1;
-  //     if (startPage < 1) {
-  //       startPage = 1;
-  //     }
-  //   }
-
-  //   const newDisplayedPages = [];
-  //   for (let i = startPage; i <= endPage; i++) {
-  //     newDisplayedPages.push(i);
-  //   }
-  //   setDisplayedPages(newDisplayedPages);
-  // };
-
-  // const handlePrevClick = () => {
-  //   if (currentPage > 1) {
-  //     onPageChange(currentPage - 1);
-  //     updateDisplayedPages(currentPage - 1);
-  //   }
-  // };
-
-  // const handlePrevClick = () => {
-  //   const prevPage = currentPage - 1;
-  //   if (prevPage > 0) {
-  //     onPageChange(prevPage);
-  //     updateDisplayedPages(prevPage);
-  //   }
-  // };
-
   const handlePrevClick = () => {
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
@@ -87,26 +55,12 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   const handleNextClick = () => {
-    if (currentPage <= totalPages) {
-      onPageChange(currentPage + 1);
-      updateDisplayedPages(currentPage + 1);
+    const nextPage = currentPage + 1;
+    if (nextPage <= totalPages) {
+      onPageChange(nextPage);
+      updateDisplayedPages(nextPage);
     }
   };
-
-  // const handleNextClick = () => {
-  //   const nextPage = currentPage + 1;
-  //   if (nextPage <= totalPages) {
-  //     onPageChange(nextPage);
-  //     updateDisplayedPages(nextPage);
-  //   }
-  // };
-
-  // const handleNextClick = () => {
-  //   if (currentPage < totalPages) {
-  //     onPageChange(currentPage + 1);
-  //     updateDisplayedPages(currentPage + 1);
-  //   }
-  // };
 
   return (
     <PaginationContainer>

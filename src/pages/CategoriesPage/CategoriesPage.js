@@ -9,12 +9,12 @@ export const CategoriesPage = () => {
   return (
     <>
       <Container>
-      <MainTitle titleName="Categories" />
-      <Categories/>
+        <MainTitle titleName="Categories" />
+        <Categories />
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </Container>
     </>
-  )
+  );
 };

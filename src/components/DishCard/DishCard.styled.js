@@ -6,11 +6,9 @@ export const CardDish = styled.div`
   border-radius: 8px;
   position: relative;
   @media (min-width: 768px) {
-   
     width: 336px;
   }
   @media (min-width: 1440px) {
-
     width: 300px;
   }
   a {
@@ -31,7 +29,6 @@ export const CardImg = styled.img`
   border-radius: 8px;
   transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
   
-
   @media (min-width: 768px) {
     // width: calc((100% - 32px) / 2);
     width: 336px;
@@ -67,7 +64,6 @@ export const CardTitle = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
   text-align: center;
 
   @media (min-width: 1440px) {

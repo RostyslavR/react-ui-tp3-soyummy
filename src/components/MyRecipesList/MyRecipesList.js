@@ -6,30 +6,35 @@ import { MyRecipe, CardList, NoRecipesText } from './MyRecipesList.styled.js';
 import { NoRecipesImg } from './NoRecipesImg.styled.js';
 import { Paginator } from '../Paginator/Paginator';
 
-export const MyRecipesList = () => {
+export const MyRecipesList = ({ recipe }) => {
   const [page, setPage] = useState(1);
   const [limit] = useState(4);
 
-  const { data: ownRecipes, isLoading } = useOwnRecipes({ page, limit });
-
   const { mutate } = useDeleteOwnRecipe();
-
   const deleteRecipe = id => {
     mutate(id);
   };
 
+  const { data: ownRecipes, isLoading } = useOwnRecipes({
+    recipe,
+    page,
+    limit,
+  });
+
   const handlePageChange = newPage => {
     setPage(newPage);
   };
+
   if (isLoading) {
     return <Loader />;
   }
+
   return (
     <MyRecipe>
       {ownRecipes && ownRecipes.length ? (
         <>
           <CardList>
-            {ownRecipes.map(recipe => (
+            {ownRecipes?.map(recipe => (
               <MyRecipesItem
                 id={recipe._id}
                 thumb={recipe.thumb}
@@ -45,7 +50,7 @@ export const MyRecipesList = () => {
           <Paginator
             currentPage={page}
             onPageChange={handlePageChange}
-            totalPages={Math.ceil(ownRecipes.length / limit)}
+            totalPages={Math.ceil(ownRecipes.total / limit)}
           />
         </>
       ) : (

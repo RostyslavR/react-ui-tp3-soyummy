@@ -2,10 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const CategoriesListWrap = styled.div`
-  // margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  // max-width: 375px;
   overflow: hidden;
   border-bottom: 1px solid #e0e0e0;
   transform: matrix(1, 0, 0, 1, 0, 0);
