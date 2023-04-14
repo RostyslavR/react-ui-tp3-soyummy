@@ -15,8 +15,7 @@ const MainPageHero = () => {
     event.preventDefault();
 
     const searchQuery = event.currentTarget.elements.query.value;
-    console.log(searchQuery);
-
+ 
     navigate(`/search?title=${searchQuery}`);
   };
 

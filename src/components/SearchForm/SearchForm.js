@@ -26,7 +26,7 @@ export const SearchForm = ({ onSubmit, color, defaultValue = '' }) => {
 
 //   const handleChange = ({ target }) => {
 //     const { value } = target;
-//     // console.log(value);
+//    
 //     setSearchQuery(value);
 //   };
 
