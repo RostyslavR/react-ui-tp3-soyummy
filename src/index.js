@@ -8,7 +8,7 @@ import {
   QueryCache,
   MutationCache,
 } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { store } from "redux/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -20,8 +20,9 @@ import { handleErrors } from "api/helpers";
 import "./index.css";
 import { CustomThemeProvider } from "components/CustomThemeProvider/CustomThemeProvider";
 
-//const baseURL = '/command_project_React_Node';
-const baseURL = "";
+// const baseURL = "/command_project_React_Node";
+
+// !!!  handleErrors
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,11 +32,11 @@ const queryClient = new QueryClient({
   },
   queryCache: new QueryCache({
     onError: (axiosError) =>
-      handleErrors({ axiosError, store, queryClient, baseURL }),
+      handleErrors({ axiosError, store, queryClient, baseURL: "" }),
   }),
   mutationCache: new MutationCache({
     onError: (axiosError) =>
-      handleErrors({ axiosError, store, queryClient, baseURL }),
+      handleErrors({ axiosError, store, queryClient, baseURL: "" }),
   }),
 });
 
@@ -51,7 +52,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <Toaster position="bottom-right" />
             </BrowserRouter>
           </CustomThemeProvider>
-          <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+          {/* <ReactQueryDevtools initialIsOpen={false} position="bottom-right" /> */}
         </QueryClientProvider>
       </PersistGate>
     </Provider>
