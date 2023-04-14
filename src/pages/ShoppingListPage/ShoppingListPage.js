@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const ShoppingLisContainer = styled(Container)`
   padding-bottom: 100px;
+  
 
   @media screen and (min-width: 768px) {
     padding-bottom: 200px;

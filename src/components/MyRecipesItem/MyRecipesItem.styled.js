@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 export const CardItem = styled.li`
   padding: 14px;
   display: flex;
-  gap: 14px;
   width: 343px;
   height: 152px;
   border-radius: 8px;
-  // background-color: #ffffff;
   background-color: ${p => p.theme.colors.whiteBackgroundToBlack};
   box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.3);
   @media screen and (min-width: 768px) {

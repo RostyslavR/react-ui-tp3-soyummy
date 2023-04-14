@@ -53,12 +53,12 @@ export const Number = styled.p`
   @media (min-width: 768px) {
     font-size: ${props => props.theme.fontSizes[10]};
     justify-content: center;
-  align-items: center;
+    align-items: center;
   }
   @media (min-width: 1440px) {
     font-size: ${props => props.theme.fontSizes[10]};
     justify-content: right;
-  align-items: right;
+    align-items: right;
   }
 `;
 
@@ -203,6 +203,7 @@ export const CheckBoxLabel = styled.label`
   ${IngedientsCheck}:checked + ${CheckBoxWrap} {
     color: ${props => props.theme.colors.greenAccent};
   }
+  cursor: pointer;
 `;
 
 export const CheckMarkIcon = styled(BsCheck)`

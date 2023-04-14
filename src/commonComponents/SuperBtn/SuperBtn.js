@@ -26,7 +26,7 @@ const SuperBtn = ({
     height: 100%;
     border-radius: 18px 44px;
     font-family: ${theme.fonts.primary};
-    font-size: ${theme.fontSizes[4]}px;
+    font-size: ${theme.fontSizes[2]}px;
     line-height: ${theme.lineHeights.btn};
     cursor: pointer;
     background-color: ${color || theme.colors.greenAccent};

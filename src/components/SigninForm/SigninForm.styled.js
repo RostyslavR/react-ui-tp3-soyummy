@@ -73,7 +73,17 @@ export const InputField = styled.input`
  padding: 18px 16px 18px 48px; 
  font-size: 18px;
   }
-
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px ${p => p.theme.colors.darkAccent} inset !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-text-fill-color: ${p =>
+      p.theme.colors.primaryLightTextNoChange} !important;
+    caret-color: white;
+  }
 
 &.input-error {
    border: 1px solid #E74A3B; 
@@ -110,7 +120,12 @@ export const SubmitButton = styled.button`
     padding: 20px;
     margin-top: 50px;
    }
+  &:disabled{
+    opacity: 0.5;
+   }
+
  `;
+
  export const StyledNavLink = styled(NavLink)`
 display: flex;
 margin-top: 10px;

@@ -36,7 +36,7 @@ export const RegisterForm = () => {
 
   const { nameError, emailError, passwordError } = signUpErrors;
 
-  const { mutate} = useRegister();
+  const { mutate, isLoading} = useRegister();
 
   const handleSubmit = () => {
 
@@ -122,7 +122,7 @@ export const RegisterForm = () => {
             )}
           </FieldWrapper>
 
-          <SubmitButton onClick={() => handleSubmit()}>
+          <SubmitButton onClick={() => handleSubmit()} disabled={isLoading}>
             Register
           </SubmitButton>
         </AuthForm>

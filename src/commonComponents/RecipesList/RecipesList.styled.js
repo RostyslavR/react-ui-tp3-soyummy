@@ -16,7 +16,6 @@ export const DishList = styled.ul`
   row-gap: 28px;
   justify-content: center;
 
-  // align-items: center;
   @media screen and (min-width: 768px) {
     width: 768px;
     gap: 32px;

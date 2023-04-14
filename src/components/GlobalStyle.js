@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     list-style: none;
   }
-  
+
   h1,
   h2,
   h3,
@@ -44,5 +44,9 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  button {
+    cursor: pointer;
   }
 `;

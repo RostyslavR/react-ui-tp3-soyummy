@@ -35,7 +35,7 @@ export const SigninForm = () => {
 
   const { emailError, passwordError } = signInErrors;
 
-  const { mutate } = useSignIn();
+  const { mutate, isLoading } = useSignIn();
   
  
   const handleSignIn = () => {
@@ -102,7 +102,9 @@ export const SigninForm = () => {
             )}
           </FieldWrapper>
 
-          <SubmitButton onClick={() => handleSignIn()}>
+            <SubmitButton onClick={() => handleSignIn()}
+              disabled={isLoading}
+            >
             Sign In
           </SubmitButton>
         </AuthForm>

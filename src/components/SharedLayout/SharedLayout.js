@@ -4,9 +4,11 @@ import { Footer } from 'components/Footer';
 import { PageLoader } from 'components/PageLoader';
 import { useUser } from 'api/hooks';
 import { Suspense } from 'react';
+import { useMotivation } from 'api/hooks';
 
 export const SharedLayout = () => {
   const { data, isLoading, isError } = useUser();
+  useMotivation();
 
   if (isLoading || isError) {
     return <PageLoader />;
