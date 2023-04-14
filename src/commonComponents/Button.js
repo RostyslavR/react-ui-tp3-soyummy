@@ -6,9 +6,7 @@ const darkColor = ({ theme: { colors } }) => colors.footerBG;
 
 export const Button = styled.button`
   color: ${primeryColor};
-  /* border: 2px solid ${({ theme: { colors } }) => colors.darkAccent}; */
   border: 2px solid transparent;
-  /* background: ${({ theme: { colors } }) => colors.darkAccent}; */
   background: ${({ greenButton }) => (greenButton ? greenColor : darkColor)};
 
   width: 130px;
@@ -50,8 +48,3 @@ export const Button = styled.button`
   `};
   }
 `;
-
-//  /* padding: 50px 42px; */
-// /* border: none; */
-// /* font-size: ${props => props.theme.fontSizes[4]}; */
-// /* margin: 1em; */

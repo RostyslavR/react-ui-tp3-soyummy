@@ -40,7 +40,6 @@ const Item = ({
         myIngredients={myIngredients}
         handleAutoinput={handleAutoinput}
       />
-      {/* <Cross onClick={() => Delete(idx)} /> */}
       <Close
         src={iconClose}
         alt="delete ingredient"
@@ -62,16 +61,11 @@ const List = styled.ul`
 const ListItem = styled.li`
   display: flex;
   gap: 10px;
-  /* justify-content: space-between; */
 `;
 
 const Close = styled.img`
   width: 14px;
   margin-left: 33px;
-  /* height: auto; */
-  /* border-radius: 50%; */
-  /* transition: transform 0.5s ease-in-out; // add a transition for smooth animation */
-  /* transform: ${({ rotate }) => rotate === 'true' && 'rotate(180deg)'}; */
 
   @media (min-width: ${({ theme: { devices } }) => devices.tablet}) {
     margin-left: 177px;
@@ -81,29 +75,3 @@ const Close = styled.img`
     margin-left: 80px;
   }
 `;
-
-// const Cross = styled.div`
-//   position: relative;
-//   width: 50px;
-//   height: 50px;
-//   background-color: #333;
-
-//   &::before,
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     width: 10px;
-//     height: 50px;
-//     background-color: #fff;
-//   }
-
-//   &::before {
-//     transform: rotate(45deg);
-//   }
-
-//   &::after {
-//     transform: rotate(-45deg);
-//   }
-// `;
-
-// Usage: <Cross />

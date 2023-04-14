@@ -50,7 +50,6 @@ export const AddRecipeForm = () => {
     };
 
     console.log(newData);
-    // addOwnRecipe.mutate({ ...newData });
   };
 
   const handleMinus = () => {

@@ -29,22 +29,16 @@ export const RecipeIngredientsFields = ({
         list={ingredientList}
         field="ttl"
         inputName="ingredient"
-        // inputValue={myIngredients[idx].ttl}
         handleAutoinput={handleAuto}
         required
-        // flexGrow={1}
-        // width="45%"
         height="53px"
       />
       <InputForm
         name="quantity"
         type="text"
-        // placeholder="quantity"
         onChange={handleInput}
         onKeyPress={handleKeyPress}
         required
-        // value={myIngredients[idx].quantity}
-        // variant="flushed"
         autoComplete="off"
         width="30px"
         height="53px"
@@ -55,10 +49,8 @@ export const RecipeIngredientsFields = ({
           list={units}
           field="t"
           inputName="unit"
-          // inputValue={myIngredients[idx].unit}
           handleAutoinput={handleAuto}
           required
-          // width="25%"
           height="53px"
         />
       </Ubox>

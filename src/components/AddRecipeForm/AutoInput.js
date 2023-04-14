@@ -102,11 +102,7 @@ export const AutoInput = ({
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  /* flex: 1 100%; */
-  /* flex-grow: 1; */
-  /* width: ${({ width }) => (width ? width : '100%')}; */
   width: 100%;
-  /* color: black; */
   color: ${({ theme: { colors } }) => colors.blackText};
   background-color: ${({ theme: { colors } }) => colors.whiteBackgroundToBlack};
 `;
@@ -114,8 +110,6 @@ const Wrapper = styled.div`
 const InputWrapper = styled.div`
   display: flex;
   width: 100%;
-  /* flex: 1 80%; */
-  /* width: ${({ width }) => (width ? width : '100%')}; */
 `;
 
 const Input = styled.input`
@@ -127,17 +121,10 @@ const Input = styled.input`
   color: ${({ theme: { colors } }) => colors.primaryDarkText};
   background-color: ${({ theme: { colors } }) => colors.whiteBackgroundToBlack};
 
-  /* width: ${({ width }) => (width ? width : '100%')}; */
-  /* width: 50px; */
-  /* flex: 1 80%; */
-  /* padding: 16px; */
-  /* height: 53px; */
   outline: none;
   height: ${({ height }) => (height ? height : '40px')};
   border: none;
   border-bottom: 1px solid black;
-  /* border-radius: 4px 4px 0 0; */
-  /* background-color: #d9d9d9; */
 
   @media (min-width: ${({ theme: { devices } }) => devices.tablet}) {
     font-size: 18px;
@@ -151,8 +138,6 @@ const ControlButton = styled.button`
 
   border: none;
   background-color: inherit;
-  /* border-radius: 4px; */
-  /* background-color: #d9d9d9; */
   transform: translateY(-50%);
   cursor: pointer;
 `;
@@ -174,10 +159,7 @@ const OptionsList = styled.ul`
   font-size: 14px;
   font-weight: ${({ theme: { fontWeights } }) => fontWeights.regular};
   color: ${({ theme: { colors } }) => colors.primaryDarkText};
-
   background-color: ${({ theme: { colors } }) => colors.lightSelector};
-  /* border: 1px solid #ccc; */
-
   border: none;
   border-radius: 4px;
 
@@ -189,21 +171,15 @@ const OptionsList = styled.ul`
 const Option = styled.li`
   padding: 8px;
   color: opacity 0.5;
-  /* background-color: ${props => (props.selected ? '#eee' : '#fff')}; */
   cursor: pointer;
 
   &:hover {
     color: ${({ theme: { colors } }) => colors.greenAccentSearch};
     color: opacity 1;
-    /* background-color: #eee; */
   }
 `;
 
 const Chevron = styled.img`
-  /* width: 200px; */
-  /* height: auto; */
-  /* border-radius: 50%; */
-  /* width: 20px; */
-  transition: transform 0.5s ease-in-out; // add a transition for smooth animation
+  transition: transform 0.5s ease-in-out;
   transform: ${({ rotate }) => rotate === 'true' && 'rotate(180deg)'};
 `;

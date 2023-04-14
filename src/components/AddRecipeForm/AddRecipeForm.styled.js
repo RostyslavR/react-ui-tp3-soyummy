@@ -3,29 +3,12 @@ import { AutoInput } from './AutoInput';
 
 export const Form = styled.form`
   width: 100%;
-  /* & {
-    outline: none;
-  } */
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* gap: 12px; */
-  /* width: 55%; */
 `;
-
-// export const DescriptionBox = styled.div`;
-//   display: flex;
-//   flex-direction: column;
-//   /* gap: 12px; */
-//   /* width: 55%; */
-// `;
 
 export const InputForm = styled.input`
   width: ${({ width }) => (width ? width : '100%')};
   height: ${({ height }) => (height ? height : '40px')};
   margin-left: ${props => (props.marginLeft ? props.marginLeft : 0)}px;
-  /* padding: 16px; */
-  /* margin-bottom: 24px; */
   outline: none;
   border: none;
   border-bottom: 1px solid black;
@@ -43,7 +26,6 @@ export const InputForm = styled.input`
 export const TextForm = styled.textarea`
   width: ${({ width }) => (width ? width : '100%')};
   height: ${({ height }) => (height ? height : '40px')};
-  /* margin-bottom: 24px; */
   border: none;
   outline: none;
   resize: none;
@@ -59,24 +41,16 @@ export const TextForm = styled.textarea`
   }
 `;
 
-// export const SelectForm = styled.select`
-//   width: ${({ width }) => (width ? width : '100%')};
-//   height: ${({ height }) => (height ? height : '40px')};
-// `;
-
 export const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* column-gap: 50px; */
   gap: 32px;
   justify-content: center;
-  /* justify-content: space-between; */
   align-items: center;
 
   width: 100%;
   @media (min-width: ${({ theme: { devices } }) => devices.tablet}) {
     align-items: start;
-    /* flex-wrap: nowrap; */
   }
   @media (min-width: ${({ theme: { devices } }) => devices.desktop}) {
     gap: 50px;
@@ -95,7 +69,6 @@ export const VBox = styled.div`
   }
   @media (min-width: ${({ theme: { devices } }) => devices.desktop}) {
     gap: 40px;
-    /* width: 393px; */
   }
 `;
 
@@ -115,15 +88,12 @@ export const TitleBox = styled.div`
 `;
 
 export const InstructionBox = styled.div`
-  /* margin-top: 44px; */
   margin-bottom: 72px;
 `;
 
 export const IngredBox = styled.div`
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  /* gap: 20px; */
   width: 100%;
 `;
 
@@ -133,15 +103,12 @@ export const LabelBox = styled.div`
 `;
 
 export const Label = styled.div`
-  /* width: 200px; */
   display: flex;
   align-items: center;
   flex-basis: 200px;
   flex-grow: 1;
   height: 43px;
   padding: 1px 0;
-  /* vertical-align: bottom; */
-  /* padding: 16px; */
   color: black;
   border-bottom: 1px solid black;
 

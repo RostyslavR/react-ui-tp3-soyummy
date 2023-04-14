@@ -11,13 +11,8 @@ export const ButtonBlock = ({ handleMinus, handlePlus, number }) => {
 };
 
 const ControlButton = styled.div`
-  /* width: 30px; */
-  /* height: 30px; */
   font-size: 16px;
   border-radius: 50%;
-  /* text-align: center; */
-  /* color: ${({ theme: { colors } }) => colors.greenAccent}; */
-  /* background: ${({ theme: { colors } }) => colors.backgroundLight}; */
   cursor: pointer;
 `;
 
