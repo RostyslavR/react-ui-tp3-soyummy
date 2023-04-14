@@ -20,7 +20,7 @@ import iconburger_menu from "images/commonSvgImg/Iconburger-menu.svg";
 
 import { HeaderNavigation } from "components/Header/HeaderNav/HeaderNav";
 import { UserLogo } from "components/Header/UserLogo/UserLogo";
-import { Container } from 'components/Container/Container';
+import { Container } from 'commonComponents/Container';
 import { ThemeToggler } from 'components/ThemeToggler/ThemeToggler';
 import { CloseButton } from 'components/CloseButton/CloseButton';
 

@@ -143,7 +143,7 @@ export const PreviewOtherCategories = styled(Link)`
   line-height: 21px;
   text-align: center;
 
-  color: ${p => p.theme.colors.darkAccent};
+  color: ${p => p.theme.colors.otherCategoriesMainPageBtn};
 
   border: 2px solid #8baa36;
   border-radius: 60px 140px 60px 140px;

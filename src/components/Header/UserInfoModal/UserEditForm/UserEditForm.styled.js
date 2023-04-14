@@ -83,17 +83,6 @@ export const UserIcon = styled.svg`
    }
 `;
 
-
-
-export const UserIconEdid = styled.svg`
-   /* position: absolute;
-   width: 18px;
-   height: 18px;
-   top: 50%;
-   left: 16.5px; 
-   transform: translateY(-50%); */
-`;
-
 export const NameInput = styled.input`
   width: 100%;
   padding: 14px;

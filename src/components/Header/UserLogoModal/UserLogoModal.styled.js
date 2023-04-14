@@ -8,8 +8,6 @@ export const UserMenu = styled.div`
   transform: translateX(-50px);
   padding: 18px;
   gap: 28px;
-  /* width: 160px;
-  height: 130px; */
   flex-direction: column;
   background-color: ${p => p.theme.colors.primaryLightText};
   border: 1px solid #8baa36;
@@ -17,7 +15,6 @@ export const UserMenu = styled.div`
 
   @media screen and (min-width: 768px) {
     gap: 32px;
-    /* border: none; */
   }
 `;
 
@@ -87,14 +84,9 @@ export const LogOutBtn = styled.button`
     background-color: ${p => p.theme.colors.secondaryDarkBackground};
   }
 
-  /* &:hover img,
-  &:focus img {
-    stroke: ${p => p.theme.colors.whiteText};
-  } */
   & img {
     width: 18px;
     height: 18px;
-    /* stroke: ${p => p.theme.colors.primaryLightText}; */
     transition: ${p => p.theme.transitions.main};
   }
 

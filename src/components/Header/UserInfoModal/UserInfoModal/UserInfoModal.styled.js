@@ -15,7 +15,6 @@ export const Overlay = styled.div`
 
 export const ModalWindow = styled.div`
   position: relative;
-  /* position: fixed; */
   width: 330px;
   height: fit-content;
   padding: ${p => (p.status === 'logout' ? '44px 24px' : '32px 24px')};

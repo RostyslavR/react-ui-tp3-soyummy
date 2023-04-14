@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useUpdateUser } from 'api/hooks/useUpdateUser';
 import { useUser } from 'api/hooks/useUser';
 import { FiUser } from 'react-icons/fi';
-// import { FiEdit2 } from 'react-icons/fi';
 
 import {
   AvatarWrapper,
@@ -13,7 +12,6 @@ import {
   NameInput,
   Button,
   InputsWrapper,
-  // UserIconEdid,
 } from './UserEditForm.styled';
 
 export const UserEditForm = ({ closeModal }) => {
@@ -63,11 +61,7 @@ export const UserEditForm = ({ closeModal }) => {
             onChange={e => setName(e.target.value)}
 
           />
-          {/* <UserIcon>
-            <FiEdit2 />
-          </UserIcon> */}
         </NameLabel>
-
         <Button type="submit" disabled={isLoading} >
           Save changes
         </Button>

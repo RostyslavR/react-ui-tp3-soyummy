@@ -6,11 +6,11 @@ export const CardDish = styled.div`
   border-radius: 8px;
   position: relative;
   @media (min-width: 768px) {
-    // width: calc((100% - 32px) / 2);
+   
     width: 336px;
   }
   @media (min-width: 1440px) {
-    // width: calc((100% - 42px) / 4);
+
     width: 300px;
   }
   a {

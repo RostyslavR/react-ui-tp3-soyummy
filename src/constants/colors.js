@@ -14,7 +14,7 @@ export const lightTheme = {
   SocialIcons: '#8BAA36', //  footer ND ADD RECEIPE social icons !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   footerSubscribeButtonBG: '#8BAA36', //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   footerTextLight: '#FAFAFA', // in foter text  !!!!!!!!!!!!!!!!!!!
-  footerRightsReserved: '#22252A', // footer  text rights reserved
+  footerRightsReserved: '#fafafa', // footer  text rights reserved
   footerBG: '#22252A', // dark color in footer
   headerAccentText: '#8BAA36',
   categoriesNames: ' #BDBDBD ',
@@ -29,6 +29,8 @@ export const lightTheme = {
   blackCloseIconToWhite: '#333333', // icon close at shopping list
   blackTextToWhite: '#000000',
   iconDarkColor: '#23262A',
+  otherCategoriesMainPageBtn: '#22252A', // Main Page Btn otherCategories
+  mainPageLogo: '#22252A', // Main Logo
   //  no change
   whiteText: '#ffffff',
   blackText: '#000000',
@@ -73,11 +75,11 @@ export const darkTheme = {
   greenAccent: '#8BAA36', // buttons  , footer in darkTheme
 
   greenAccentSearch: '#22252A', // search-- buttons
-  SocialIcons: '#8BAA36', //  footer ND ADD RECEIPE social icons !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SocialIcons: '#fafafa', //  footer ND ADD RECEIPE social icons !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   footerSubscribeButtonBG: '#1E1F28', //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   footerTextLight: '#FAFAFA', // in foter text !!!!!!!!!!!!!!!!!!
   footerBG: '#8BAA36',
-  footerRightsReserved: '#FAFAFA', // footer  text rights reserved
+  footerRightsReserved: '#22252A', // footer  text rights reserved
   headerAccentText: '#8BAA36',
   categoriesNames: ' #FAFAFA ', //
   categoriesAccent: '#8BAA36', ///  not changing!
@@ -87,6 +89,8 @@ export const darkTheme = {
   lightSelector: '#8BAA36', // background-color in search select option
   myRecipyDeleteButton: '#8BAA36', // my recipe  delete button background, no change
   whiteBackgroundToBlack: '#2A2C36', /// favorites bg
+  otherCategoriesMainPageBtn: '#FAFAFA', // Main Page Btn otherCategories
+  mainPageLogo: '#FAFAFA', // Main Logo
   //  no change
   normalGrey: '#f0f0f0', /// border in search form ! no change! added transparency 0.5 in search form
   whiteText: '#ffffff', // no change

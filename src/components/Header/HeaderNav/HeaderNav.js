@@ -3,9 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { AiOutlineSearch} from 'react-icons/ai';
 
-import { 
-  // Navigation, 
-  LocationLink } from './HeaderNav.styled';
+import { LocationLink } from './HeaderNav.styled';
 
 export const HeaderNavigation = ({ setShowBurgerMenu = () => {} }) => {
   const { pathname } = useLocation();
@@ -30,7 +28,6 @@ export const HeaderNavigation = ({ setShowBurgerMenu = () => {} }) => {
   }, [pathname]);
 
   return (
-    // <Navigation>
       <>
         <LocationLink
           onClick={() => {
@@ -87,6 +84,5 @@ export const HeaderNavigation = ({ setShowBurgerMenu = () => {} }) => {
         < AiOutlineSearch />
         </LocationLink>
       </>
-    // </Navigation>
   );
 };

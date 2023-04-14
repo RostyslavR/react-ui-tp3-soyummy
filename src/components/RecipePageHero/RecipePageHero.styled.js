@@ -45,7 +45,7 @@ export const SectionHeroTitle = styled.h1`
   font-family: ${props => props.theme.fonts.primary};
   font-size: ${props => props.theme.fontSizes[44]};
   color: ${props => props.theme.colors.greenAccent};
-  fonts-weight: ${props => props.theme.fontWeights.semibold};
+  font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 1;
   max-width: 360px;
   margin-right: auto;
@@ -59,7 +59,7 @@ export const SectionHeroTitle = styled.h1`
 `;
 
 export const SectionHeroDesc = styled.p`
-  color: #22252a;
+  color: ${props => props.theme.colors.quaternaryDarkText};
   max-width: 300px;
   margin-right: auto;
   margin-left: auto;

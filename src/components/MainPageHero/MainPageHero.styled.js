@@ -35,7 +35,7 @@ export const HeroTitle = styled.h1`
   margin-bottom: 14px;
 
   & span {
-    color: ${p => p.theme.colors.secondaryDarkBackground};
+    color: ${p => p.theme.colors.mainPageLogo};
   }
 
   @media screen and (min-width: 768px) {

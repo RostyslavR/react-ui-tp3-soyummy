@@ -27,6 +27,8 @@ export * from './useShoppingList';
 export * from './useAddShoppingList';
 export * from './useDeleteShoppingList';
 
+export * from './useMotivation';
+
 // ------------react-responsive------------
 
 export * from './useMediaQuery';

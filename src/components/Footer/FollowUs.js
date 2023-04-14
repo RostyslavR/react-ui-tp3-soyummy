@@ -1,31 +1,28 @@
-import instagram from '../../images/footer/instagram.svg';
-import facebook from '../../images/footer/facebook.svg';
-import twitter from '../../images/footer/twitter.svg';
-import youtube from '../../images/footer/youtube.svg';
+import { BsFacebook, BsYoutube, BsTwitter, BsInstagram } from 'react-icons/bs';
 
-import { IconList, IconItem, IconImg } from './Footer.styled';
+import { IconList, IconItem, IconFol } from './Footer.styled';
 
 export const FollowUs = () => {
   return (
     <IconList>
       <IconItem>
         <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-          <IconImg src={facebook} alt="facebook" />
+          <IconFol as={BsFacebook} size={20} />
         </a>
       </IconItem>
       <IconItem>
         <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-          <IconImg src={youtube} alt="youtube" />
+          <IconFol as={BsYoutube} size={20} />
         </a>
       </IconItem>
       <IconItem>
         <a href="https://twitter.com/" target="_blank" rel="noreferrer">
-          <IconImg src={twitter} alt="twitter" />
+          <IconFol as={BsTwitter} size={20} />
         </a>
       </IconItem>
       <IconItem>
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-          <IconImg src={instagram} alt="instagram" />
+          <IconFol as={BsInstagram} size={20} />
         </a>
       </IconItem>
     </IconList>

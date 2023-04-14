@@ -3,6 +3,7 @@ import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { PageLoader } from 'components/PageLoader';
 import { useUser } from 'api/hooks';
+import { Suspense } from 'react';
 
 export const SharedLayout = () => {
   const { data, isLoading, isError } = useUser();
@@ -14,7 +15,9 @@ export const SharedLayout = () => {
   return (
     <div>
       <Header user={data} />
-      <Outlet />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
       <Footer />
     </div>
   );

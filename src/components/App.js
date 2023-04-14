@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-
+import { lazy } from 'react';
 import { ToastContainer } from 'react-toastify';
 
 import { RestrictedRoute, PrivateRoute } from 'service/routes';
 
 import { SharedLayout } from './SharedLayout';
-import { MainPage } from 'pages/MainPage';
+
+// import { MainPage } from 'pages/MainPage';
 import { CategoriesPage } from 'pages/CategoriesPage';
 import { AddRecipePage } from 'pages/AddRecipePage';
 import { FavoritePage } from 'pages/FavoritePage';
@@ -19,10 +20,10 @@ import { AuthPage } from 'pages/AuthPage';
 
 import { GlobalStyle } from './GlobalStyle';
 
-// import { MotivatingModal } from './MotivatingModal';
+// import {MotivatingModal} from './MotivatingModal'
 
 // const AuthPage = lazy(() => import('pages/AuthPage/AuthPage'));
-// const MainPage = lazy(() => import('pages/MainPage/MainPage'));
+const MainPage = lazy(() => import('pages/MainPage/MainPage'));
 // const CategoriesPage = lazy(() => import('pages/CategoriesPage/CategoriesPage'));
 // const FavoritePage = lazy(() => import('pages/FavoritePage/FavoritePage'));
 // const MyRecipesPage = lazy(() => import('pages/MyRecipesPage/MyRecipesPage'));
@@ -65,6 +66,7 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
+
       <ToastContainer />
     </div>
   );

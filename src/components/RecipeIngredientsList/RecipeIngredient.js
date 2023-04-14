@@ -23,8 +23,7 @@ export const RecipeIngredient = ({ ingredient, isSelected, recipeId }) => {
     // якщо чекбокс був обраний, робимо запит на видалення інгредієнта з ShoppingList
     if (isChecked) {
       deleteShoppingList.mutate([{ id: _id, recipe: recipeId }]);
-
-      // якщо чекбокс не був обраний, робимо запит на додавання інгредієнта до ShoppingList
+    // якщо чекбокс не був обраний, робимо запит на додавання інгредієнта до ShoppingList
     } else {
       addShoppingList.mutate({ thb, id: _id, measure, ttl, recipe: recipeId });
     }

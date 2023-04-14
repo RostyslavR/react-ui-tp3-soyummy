@@ -148,5 +148,5 @@ font-size: ${props => props.theme.fontSizes[3]}px;
     width: 198px;
    
   }
-
+  }}
 `;

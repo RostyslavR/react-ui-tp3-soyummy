@@ -8,12 +8,6 @@ import {
 import NoImage from '../../images/default/default-middle.jpg';
 import { scrollUp } from 'utils/scrollUp';
 
-// import { useRecipes } from '../../api/hooks';
-// import { useParams } from 'react-router-dom';
-
-// const { categoryName: categoryId } = useParams();
-
-//   const { data: recipes, error, isLoading } = useRecipes({ category: categoryId });
 
 export const DishCard = ({ id, title, image }) => {
   return (

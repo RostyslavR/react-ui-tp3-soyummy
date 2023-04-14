@@ -13,7 +13,7 @@ import { StyledAuthPage, PersonImg, AuthFlex, FormLinkWraper, AuthInn } from './
 
 
 
-export const AuthPage = ({ type }) => {
+const AuthPage = ({ type }) => {
   return (
     <StyledAuthPage>
       <AuthInn className="inn">
@@ -40,3 +40,5 @@ export const AuthPage = ({ type }) => {
       </StyledAuthPage>
   );
 };
+
+export default AuthPage;

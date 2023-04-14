@@ -30,8 +30,21 @@ export const Text = styled.p`
 `;
 
 export const Title = styled.span`
-  color: ${p =>
-    p.isError ? p.theme.colors.redValidation : p.theme.colors.greenAccent};
+  color: ${
+    p => {
+      if (p.variant === 'error') {
+        return p.theme.colors.redValidation;
+      } else if (p.variant === 'motivation') {
+        return p.theme.colors.yellowValidation;
+      } else {
+        return p.theme.colors.greenAccent;
+      }
+    }
+
+    // p.variant === 'error'
+    //   ? p.theme.colors.redValidation
+    //   : p.theme.colors.greenAccent
+  };
 `;
 
 export const Button = styled.button`
@@ -41,18 +54,42 @@ export const Button = styled.button`
   width: 48px;
   height: 48px;
   color: ${p => p.theme.colors.whiteText};
-  background-color: ${p =>
-    p.isError ? p.theme.colors.redValidation : p.theme.colors.greenAccent};
+  background-color: ${p => {
+    if (p.variant === 'error') {
+      return p.theme.colors.redValidation;
+    } else if (p.variant === 'motivation') {
+      return p.theme.colors.yellowValidation;
+    } else {
+      return p.theme.colors.greenAccent;
+    }
+  }};
+  // p.isError ? p.theme.colors.redValidation : p.theme.colors.greenAccent}};
+
   border-radius: 9999px;
   border: 3px solid
-    ${p =>
-      p.isError ? p.theme.colors.redValidation : p.theme.colors.greenAccent};
+    ${
+      p => {
+        if (p.variant === 'error') {
+          return p.theme.colors.redValidation;
+        } else if (p.variant === 'motivation') {
+          return p.theme.colors.yellowValidation;
+        } else {
+          return p.theme.colors.greenAccent;
+        }
+      }
+
+      // p.variant === 'error'
+      //   ? p.theme.colors.redValidation
+      //   : p.theme.colors.greenAccent
+    };
   margin-left: auto;
   margin-right: auto;
 
   :hover {
     color: ${p =>
-      p.isError ? p.theme.colors.redValidation : p.theme.colors.greenAccent};
+      p.variant === 'error'
+        ? p.theme.colors.redValidation
+        : p.theme.colors.greenAccent};
     background-color: transparent;
   }
 `;

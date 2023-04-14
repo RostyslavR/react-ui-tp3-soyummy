@@ -28,7 +28,7 @@ export const Label = styled.label`
   width: 61px;
   height: 28px;
   background-color: ${p =>
-    p.mode === 'dark' ? p.theme.colors.mainAccent : p.theme.colors.switchBg};
+    p.mode === 'dark' ? p.theme.colors.greenAccent : p.theme.colors.switchBg};
   box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: ${props => props.theme.radii.tem};
   cursor: pointer;

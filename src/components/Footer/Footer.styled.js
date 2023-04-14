@@ -8,11 +8,11 @@ import spinachDesk from '../../images/background/spinach_bottom_right_desk_1x.pn
 import upSpinachMob from '../../images/background/spinach_bottom_left_mob_1x.png';
 import upSpinachTab from '../../images/background/spinach_bottom_left_tab_1x.png';
 import upSpinachDesk from '../../images/background/spinach_bottom_left_desk_1x.png';
+
 export const FooterStyle = styled.footer`
   font-family: ${p => p.theme.fonts.primary};
   position: relative;
-  background-color: ${p => p.theme.colors.darkAccent};
-
+  background-color: ${p => p.theme.colors.footerBG};
 `;
 export const Spinach = styled.div`
   position: absolute;
@@ -170,7 +170,7 @@ export const Styledlink = styled(NavLink)`
   color: ${p => p.theme.colors.primaryLightTextNoChange};
   &:hover,
   :focus {
-    color: ${p => p.theme.colors.greenAccent};
+    color: ${p => p.theme.colors.greenAccentSearch};
   }
 `;
 
@@ -306,7 +306,7 @@ export const Btn = styled.button`
   border: none;
   border-radius: 6px;
   outline: rgba(0, 0, 0, 0.2);
-  background-color: ${p => p.theme.colors.greenAccent};
+  background-color: ${p => p.theme.colors.footerSubscribeButtonBG};
   font-size: 14px;
   line-height: 1.14;
   margin-top: 8px;
@@ -318,7 +318,7 @@ export const Btn = styled.button`
 
   &:hover:valid,
   :focus:valid {
-    color: ${p => p.theme.colors.darkAccent};
+    color: ${p => p.theme.colors.buttonColor};
   }
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
@@ -350,22 +350,21 @@ export const IconItem = styled.li`
     }
   }
 `;
+export const IconFol = styled(Icon)`
+  fill: ${p => p.theme.colors.SocialIcons};
 
-export const IconImg = styled.img`
-  width: 18px;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
   &:hover,
   :focus {
-    opacity: 0.8;
+    fill: ${p => p.theme.colors.primaryLightText};
     transform: scale(1.2);
-  }
-  @media screen and (min-width: 768px) {
-    width: 20px;
   }
 `;
 
 ///////////////  Styled Rights /////////
 export const RightsBox = styled.div`
-  background-color: ${p => p.theme.colors.lightBackground};
+  background-color: ${p => p.theme.colors.footerRightsReserved};
   padding: 28px 0px;
   background-image: url(${spinachMob});
   background-size: inherit;
@@ -387,10 +386,9 @@ export const RightsText = styled.p`
   font-size: 10px;
   line-height: 1;
   letter-spacing: -0.01em;
-  color: #22252a;
+  color: ${p => p.theme.colors.otherCategoriesMainPageBtn};
   opacity: 0.5;
   text-align: center;
-
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1;

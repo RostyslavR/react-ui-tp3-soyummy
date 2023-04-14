@@ -7,15 +7,21 @@ export const IngredientsList = styled.div`
   background-color: ${props => props.theme.colors.greenAccent};
   border-radius: 8px;
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-column-gap: 1px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 5px;
   grid-row-gap: 2em;
+  @media (min-width: 768px) {
+    grid-template-columns: 4fr 2fr 1fr;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 4fr 2fr 1fr;
+  }
 `;
 
 export const Ingredients = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[10]};
-  font-weight: ${props => props.theme.fontWeights.semibold}; 
+  font-size: ${props => props.theme.fontSizes[8]};
+  font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -25,11 +31,16 @@ export const Ingredients = styled.p`
   justify-content: left;
   align-items: left;
   letter-spacing: 0.03em;
+  /* @media (min-width: 1440px)) {
+    font-size: ${props => props.theme.fontSizes[10]};
+    justify-content: left;
+  align-items: left;
+  } */
 `;
 
 export const Number = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[10]};
+  font-size: ${props => props.theme.fontSizes[8]};
   font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   color: ${props => props.theme.colors.lightBackground};
@@ -39,19 +50,29 @@ export const Number = styled.p`
   justify-content: right;
   align-items: right;
   letter-spacing: 0.03em;
+  @media (min-width: 768px) {
+    font-size: ${props => props.theme.fontSizes[10]};
+    justify-content: center;
+  align-items: center;
+  }
+  @media (min-width: 1440px) {
+    font-size: ${props => props.theme.fontSizes[10]};
+    justify-content: right;
+  align-items: right;
+  }
 `;
 
 export const AddToList = styled.p`
   font-family: ${props => props.theme.fonts.primary};
   font-size: ${props => props.theme.fontSizes[10]};
-  font-weight: ${props => props.theme.fontWeights.semibold}; 
+  font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   color: ${props => props.theme.colors.lightBackground};
   padding-top: 21px;
   padding-bottom: 21px;
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: center;
+  align-items: center;
   margin-right: 15px;
   letter-spacing: 0.03em;
 `;
@@ -142,7 +163,7 @@ export const IngedientsMeasure = styled.span`
     margin-right: 78px;
   }
   @media (min-width: 1440px) {
-    margin-right: 151px;
+    margin-right: 100px;
     line-height: 1.5;
     font-weight: ${props => props.theme.fontWeights.semibold};
     font-size: ${props => props.theme.fontSizes[18]};

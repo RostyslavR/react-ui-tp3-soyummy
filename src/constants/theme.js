@@ -37,16 +37,15 @@ export const theme = Object.freeze({
     secondaryDarkText: '#3E4462', /// titles of recipy, ingredients
     secondaryDarkTextNoChange: '#3E4462', ///
     tertiaryDarkText: '#001833', /// title of pages (Favorites, My receipies, categories, search, shopping list
- 
+
     mainPageButtons: '#8AA936', /// main page buttons except footer! also my receipy
     greenAccent: '#8BAA36', // buttons  , footer in darkTheme     !!!!!!!!!!!!!!!!  checkbox
     greenAccentSearch: '#8BAA36', // search buttons
- 
 
     SocialIcons: '#8BAA36', //  footer ND ADD RECEIPE social icons !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     footerSubscribeButtonBG: '#8BAA36', //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     footerTextLight: '#FAFAFA', // in foter text  !!!!!!!!!!!!!!!!!!!
-    footerRightsReserved: '#22252A', // footer  text rights reserved
+    footerRightsReserved: '#fafafa', // footer  text rights reserved
     footerBG: '#22252A', // dark color in footer
     headerAccentText: '#8BAA36',
     categoriesNames: ' #BDBDBD ',
