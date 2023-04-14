@@ -49,6 +49,11 @@ export const FavoritesList = ({ favorite }) => {
               />
             ))}
           </FavoritesListContent>
+          <Paginator
+            currentPage={page}
+            onPageChange={handlePageChange}
+            totalPages={Math.ceil(recipes.total / limit)}
+          />
         </>
       ) : (
         <NoRecipesText>
@@ -56,11 +61,6 @@ export const FavoritesList = ({ favorite }) => {
           <NoRecipesImg />
         </NoRecipesText>
       )}
-      <Paginator
-        currentPage={page}
-        onPageChange={handlePageChange}
-        totalPages={Math.ceil(recipes.total / limit)}
-      />
     </FavoritesContainer>
   );
 };

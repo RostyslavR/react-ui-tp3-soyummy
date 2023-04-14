@@ -66,7 +66,7 @@ export const SearchButton = styled.button`
   color: ${props => props.theme.colors.lightBackground};
   background-color: ${props => props.color};
 
-  border: 1px solid #f0f0f0;
+  border: 1px solid ${props => props.color};
   border-radius: 60px 120px 60px 120px;
    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
@@ -76,6 +76,7 @@ export const SearchButton = styled.button`
         ? props.theme.colors.quaternaryDarkText
         : props.theme.colors.greenAccentSearch};
         transform: scale(1.05);
+       border: 1px solid ${props => props.theme.colors.lightBackground};
   }
 
   

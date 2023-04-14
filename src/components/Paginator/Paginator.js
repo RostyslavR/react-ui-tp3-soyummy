@@ -11,11 +11,29 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
 
   useEffect(() => {
     const newDisplayedPages = [];
-    for (let i = 1; i <= totalPages; i++) {
+    const maxDisplayedPages = 5;
+    const halfMaxDisplayedPages = Math.floor(maxDisplayedPages / 2);
+
+    let startPage = currentPage - halfMaxDisplayedPages;
+    if (startPage < 1) {
+      startPage = 1;
+    }
+
+    let endPage = startPage + maxDisplayedPages - 1;
+    if (endPage > totalPages) {
+      endPage = totalPages;
+      startPage = endPage - maxDisplayedPages + 1;
+      if (startPage < 1) {
+        startPage = 1;
+      }
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
       newDisplayedPages.push(i);
     }
+
     setDisplayedPages(newDisplayedPages);
-  }, [totalPages]);
+  }, [currentPage, totalPages]);
 
   const handlePageClick = page => {
     onPageChange(page);
@@ -78,7 +96,10 @@ export const Paginator = ({ currentPage, totalPages, onPageChange }) => {
           </PaginationButton>
         ))}
       </PaginationNumbers>
-      <PaginationButton onClick={handleNextClick}>
+      <PaginationButton
+        onClick={handleNextClick}
+        disabled={currentPage === totalPages}
+      >
         <BsChevronRight />
       </PaginationButton>
     </PaginationContainer>

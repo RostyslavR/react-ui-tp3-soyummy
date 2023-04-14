@@ -80,7 +80,7 @@ export const SearchBar = () => {
           <Paginator
             currentPage={page}
             onPageChange={handlePageChange}
-            totalPages={Math.ceil(data.length / limit)}
+            totalPages={Math.ceil(data.total / limit)}
           />
         </WrapperPaginator>
       )}

@@ -5,6 +5,7 @@ export const PaginationContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  font-weight: 500;
   background-color: ${p => p.theme.colors.whiteBackgroundToBlack};
   border-radius: 25px;
   padding: 5px;
@@ -35,7 +36,6 @@ export const PaginationButton = styled.button`
   &:disabled {
     opacity: 0.5;
     cursor: default;
-    color: black;
   }
 `;
 
