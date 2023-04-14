@@ -1,17 +1,17 @@
-import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Button } from 'commonComponents/Button';
-import { ButtonBlock } from './ButtonBlock';
-import { SectionTitle } from 'commonComponents/SectionTitle';
-import { RecipeInstructiosFields } from './RecipeInstructionsFields';
-import { RecipeDescriptionFields } from './RecipeDescriptionFields';
-import { ImageButton } from 'commonComponents/ImageButton';
-import { IngredientList } from './IngredientList';
-import { Box, TitleBox, InstructionBox, Form } from './AddRecipeForm.styled';
-import { fQ } from './lib';
-import image from 'images/food-blank.svg';
-import { useAddOwnRecipe, useIngredients } from 'api/hooks';
+import { Button } from "commonComponents/Button";
+import { ButtonBlock } from "./ButtonBlock";
+import { SectionTitle } from "commonComponents/SectionTitle";
+import { RecipeInstructiosFields } from "./RecipeInstructionsFields";
+import { RecipeDescriptionFields } from "./RecipeDescriptionFields";
+import { ImageButton } from "commonComponents/ImageButton";
+import { IngredientList } from "./IngredientList";
+import { Box, TitleBox, InstructionBox, Form } from "./AddRecipeForm.styled";
+import { fQ } from "./lib";
+import image from "images/food-blank.svg";
+import { useAddOwnRecipe, useIngredients } from "api/hooks";
 
 export const AddRecipeForm = () => {
   const navigate = useNavigate();
@@ -19,15 +19,15 @@ export const AddRecipeForm = () => {
   const ingredients = useIngredients();
   const addOwnRecipe = useAddOwnRecipe({
     onSuccess: () => {
-      navigate('/my');
+      navigate("/my");
     },
   });
 
   const filePicker = useRef(null);
   const [recipeData, setRecipeData] = useState({
-    instructions: '',
-    title: '',
-    description: '',
+    instructions: "",
+    title: "",
+    description: "",
     thumb: null,
   });
 
@@ -38,9 +38,9 @@ export const AddRecipeForm = () => {
     filePicker.current.click();
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    const ingredients = myIngredients.map(item => {
+    const ingredients = myIngredients.map((item) => {
       return { id: item.id, measure: `${fQ(item.quantity)} ${item.unit}` };
     });
 
@@ -49,7 +49,7 @@ export const AddRecipeForm = () => {
       ingredients,
     };
 
-    console.log(newData);
+    addOwnRecipe.mutate({ ...newData });
   };
 
   const handleMinus = () => {
@@ -59,7 +59,7 @@ export const AddRecipeForm = () => {
     setMyIngredients([...myIngredients, {}]);
   };
 
-  const handleIngradientDelete = idx => {
+  const handleIngradientDelete = (idx) => {
     idx = myIngredients.length - 1;
     setMyIngredients([
       ...myIngredients.slice(0, idx),
@@ -76,7 +76,7 @@ export const AddRecipeForm = () => {
       setRecipeData({ ...recipeData, [name]: value });
     } else {
       const arr = [...myIngredients];
-      if (name === 'ingredient') {
+      if (name === "ingredient") {
         arr[idx].id = element._id;
       } else {
         arr[idx][name] = value;
