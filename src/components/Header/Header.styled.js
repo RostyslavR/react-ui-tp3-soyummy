@@ -88,9 +88,7 @@ export const MobileMenuWrapper = styled.div`
   transition: transform 1s cubic-bezier(0, 0.52, 0, 1);
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: space-between; */
-  align-items: center;
-  gap: 32px;
+  align-items: space-between;
   background-image: url(${BgMobile1x});
   background-color: ${(p) => p.theme.colors.secondaryAccent};
   background-position: bottom right;
@@ -117,7 +115,6 @@ export const MobileMenuWrapper = styled.div`
 export const MobileMenuHeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 
 export const MobileMenuThemeTogglerWrapper = styled.div`
