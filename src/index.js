@@ -45,7 +45,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate loading={null} persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <CustomThemeProvider>
-            <BrowserRouter basename={baseURL}>
+//            <BrowserRouter basename={baseURL}>
+            <BrowserRouter>
               <App />
               <Toaster position="bottom-right" />
             </BrowserRouter>
