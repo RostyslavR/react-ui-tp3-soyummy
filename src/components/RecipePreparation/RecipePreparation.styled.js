@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const RecipePreparationTitle = styled.h1`
   font-family: ${props => props.theme.fonts.primary};
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 24px;
+  font-weight: ${props => props.theme.fontWeights.semibold};
+  font-size: ${props => props.theme.fontSizes[7]}px;
+  line-height: 1;
   color: ${props => props.theme.colors.secondaryDarkText};
   margin-bottom: 35px;
   @media (min-width: 768px) {
@@ -25,22 +25,17 @@ export const Box = styled.div`
 export const SectionPreparationDescription = styled.ul`
   font-family: ${props => props.theme.fonts.primary};
   font-weight: ${props => props.theme.fontWeights.regular};
-  font-size: ${props => props.theme.fontSizes[12]};
+  font-size: ${props => props.theme.fontSizes[2]}px;
   line-height: 1.6;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 14px;
   @media (min-width: 768px) {
-    font-family: ${props => props.theme.fonts.primary};
-    font-weight: ${props => props.theme.fontWeights.regular};
-    font-size: ${props => props.theme.fontSizes[14]};
+    font-size: ${props => props.theme.fontSizes[3]}px;
     line-height: 1.2;
   }
   @media (min-width: 1440px) {
-    font-family: ${props => props.theme.fonts.primary};
-    font-weight: ${props => props.theme.fontWeights.regular};
-    font-size: ${props => props.theme.fontSizes[14]};
     margin-bottom: 0;
     padding-bottom: 200px;
     padding-right: 50px;
@@ -49,8 +44,8 @@ export const SectionPreparationDescription = styled.ul`
 
 export const TextCount = styled.span`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: 14px;
-  font-weight: 600;
+  font-size: ${props => props.theme.fontSizes[3]}px;
+  font-weight: ${props => props.theme.fontWeights.semibold};
   color: ${props => props.theme.colors.whiteText};
 `;
 
@@ -67,11 +62,11 @@ export const Count = styled.span`
 export const Text = styled.p`
   line-height: 1.5;
   margin-left: 14px;
-  font-size: 12px;
+  font-size: ${props => props.theme.fontSizes[2]}px;
   line-height: 1.33;
   color: ${props => props.theme.colors.primaryDarkText};
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: ${props => props.theme.fontSizes[3]}px;
     line-height: 1.2;
   }
 `;
@@ -103,8 +98,8 @@ export const Img = styled.img`
   display: block;
 `;
 
-export const DefaultImg = styled.img`
-  border-radius: 8px;
-  width: 84px;
-  height: 84px;
+export const DefaultImg = styled(Img).attrs(() => ({
+  src: "https://res.cloudinary.com/dsseiacfv/image/upload/v1680762454/recipeImages/wkv92kkm5wgsmrst8ype.png",
+  alt: "Recipe foto",
+}))`
 `;

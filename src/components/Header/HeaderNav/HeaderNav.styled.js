@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 32px;
-  @media screen and (min-width: 768px) {
-    gap: 40px;
-  }
-  @media screen and (min-width: 1440px) {
+display: flex; 
+align-items: center; 
+justify-content: center;
+flex-direction: column;
+gap: 32px;
+   @media screen and (min-width: 768px) {
+     gap: 40px;
+   }
+   @media screen and (min-width: 1440px) {
     flex-direction: row;
     gap: 30px;
     justify-content: space-between;
@@ -18,6 +18,7 @@ export const Navigation = styled.nav`
     margin-right: 220px;
   }
 `;
+
 
 export const LocationList = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ export const LocationList = styled.div`
   }
 `;
 
+
 export const LocationLink = styled(NavLink)`
   display: flex;
   gap: 8px;
@@ -43,9 +45,10 @@ export const LocationLink = styled(NavLink)`
   line-height: ${p => p.theme.lineHeights.subheader};
   transition: ${p => p.theme.transitions.main};
   font-size: 18px;
-
+  
   :hover,
   :focus-visible {
+
     color: ${p => p.theme.colors.greenAccent};
   }
   &:hover svg,
@@ -53,6 +56,7 @@ export const LocationLink = styled(NavLink)`
     stroke: ${p => p.theme.colors.greenAccent};
   }
   @media screen and (min-width: 1440px) {
+
     font-size: 24px;
   }
   @media screen and (min-width: 1440px) {
@@ -73,3 +77,6 @@ export const LocationLink = styled(NavLink)`
     }
   }
 `;
+
+
+

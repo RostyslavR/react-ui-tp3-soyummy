@@ -20,27 +20,25 @@ export const IngredientsList = styled.div`
 
 export const Ingredients = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[8]};
+  font-size: ${props => props.theme.fontSizes[1]}px;
   font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   padding-top: 21px;
   padding-bottom: 21px;
   color: ${props => props.theme.colors.lightBackground};
-  margin-left: 15px;
+  margin-left: 20px;
   display: flex;
   justify-content: left;
   align-items: left;
   letter-spacing: 0.03em;
-  /* @media (min-width: 1440px)) {
-    font-size: ${props => props.theme.fontSizes[10]};
-    justify-content: left;
-  align-items: left;
-  } */
+  @media (min-width: 768px) {
+    font-size: ${props => props.theme.fontSizes[4]}px;
+  }
 `;
 
 export const Number = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[8]};
+  font-size: ${props => props.theme.fontSizes[1]}px;
   font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   color: ${props => props.theme.colors.lightBackground};
@@ -51,12 +49,11 @@ export const Number = styled.p`
   align-items: right;
   letter-spacing: 0.03em;
   @media (min-width: 768px) {
-    font-size: ${props => props.theme.fontSizes[10]};
+    font-size: ${props => props.theme.fontSizes[4]}px;
     justify-content: center;
     align-items: center;
   }
   @media (min-width: 1440px) {
-    font-size: ${props => props.theme.fontSizes[10]};
     justify-content: right;
     align-items: right;
   }
@@ -64,7 +61,7 @@ export const Number = styled.p`
 
 export const AddToList = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[10]};
+  font-size: ${props => props.theme.fontSizes[1]}px;
   font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 27px;
   color: ${props => props.theme.colors.lightBackground};
@@ -75,6 +72,9 @@ export const AddToList = styled.p`
   align-items: center;
   margin-right: 15px;
   letter-spacing: 0.03em;
+  @media (min-width: 768px) {
+    font-size: ${props => props.theme.fontSizes[4]}px;
+  }
 `;
 
 export const IngedientsListItems = styled.ul`
@@ -93,9 +93,6 @@ export const IngedientsItemList = styled.li`
   width: 100%;
   padding: 14px 29px 14px 14px;
   justify-content: space-between;
-  @media (min-width: 768px) {
-    padding: 33px 58px 33px 40px;
-  }
   @media (min-width: 768px) {
     padding: 27px 70px 27px 58px;
   }
@@ -124,20 +121,16 @@ export const Wrap = styled.div`
 
 export const IngedientsTitle = styled.p`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[12]};
+  font-size: ${props => props.theme.fontSizes[2]}px;
   font-weight: ${props => props.theme.fontWeights.medium};
   line-height: 1.6;
   max-width: 200px;
   @media (min-width: 768px) {
     max-width: 220px;
-    font-size: ${props => props.theme.fontSizes[12]};
-    font-weight: ${props => props.theme.fontWeights.medium};
-    line-height: 1.6;
+    font-size: ${props => props.theme.fontSizes[7]}px;
   }
   @media (min-width: 1440px) {
     max-width: 420px;
-    font-size: ${props => props.theme.fontSizes[24]};
-    font-weight: ${props => props.theme.fontWeights.medium};
     line-height: 1;
   }
 `;
@@ -150,23 +143,15 @@ export const IngedientsMeasure = styled.span`
   max-width: 126px;
   text-align: center;
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[12]};
+  font-size: ${props => props.theme.fontSizes[1]}px;
   font-weight: ${props => props.theme.fontWeights.semibold};
   background-color: ${props => props.theme.colors.greenAccent};
   color: ${props => props.theme.colors.lightBackground};
   line-height: 1.5;
   @media (min-width: 768px) {
-    font-size: ${props => props.theme.fontSizes[18]};
-    font-weight: ${props => props.theme.fontWeights.semibold};
-    line-height: 1.5;
+    font-size: ${props => props.theme.fontSizes[5]}px;
     padding: 4px 8px;
     margin-right: 78px;
-  }
-  @media (min-width: 1440px) {
-    margin-right: 100px;
-    line-height: 1.5;
-    font-weight: ${props => props.theme.fontWeights.semibold};
-    font-size: ${props => props.theme.fontSizes[18]};
   }
 `;
 

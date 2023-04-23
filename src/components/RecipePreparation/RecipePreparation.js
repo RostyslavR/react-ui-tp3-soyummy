@@ -10,18 +10,16 @@ import {
   DefaultImg,
   Box,
 } from './RecipePreparation.styled';
-import notFoundFoto from '../../images/receipy/default-recipe-image-not-found.gif'
 
 export const RecipePreparation = ({ description, preview }) => {
   return (
-    
     <Box>
-    <SectionPreparationDescription>
+      <SectionPreparationDescription>
         <RecipePreparationTitle>Recipe Preparation</RecipePreparationTitle>
         {description &&
           description.split('. ').map((el, i) => {
             return (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start' }}>
+              <li key={i} style={{ display: 'flex', alignItems: 'flex-start' }}>
                 <div>
                   <Count>
                     <TextCount>{i + 1}</TextCount>
@@ -33,12 +31,8 @@ export const RecipePreparation = ({ description, preview }) => {
           })}
       </SectionPreparationDescription>
       <ImgThumb>
-          {preview ? (<Img alt="Recipe foto" src={preview} />) : (<DefaultImg alt="Recipe foto" src={notFoundFoto} />)}
-        </ImgThumb>
+        {preview ? <Img alt="Recipe foto" src={preview} /> : <DefaultImg />}
+      </ImgThumb>
     </Box>
-      
-      
-      
-    
   );
 };

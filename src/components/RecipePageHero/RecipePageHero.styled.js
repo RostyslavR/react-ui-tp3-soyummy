@@ -43,7 +43,7 @@ export const SectionHero = styled.section`
 
 export const SectionHeroTitle = styled.h1`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes[44]};
+  font-size: ${props => props.theme.fontSizes[7]}px;
   color: ${props => props.theme.colors.greenAccent};
   font-weight: ${props => props.theme.fontWeights.semibold};
   line-height: 1;
@@ -52,7 +52,7 @@ export const SectionHeroTitle = styled.h1`
   margin-left: auto;
   margin-bottom: 18px;
   @media (min-width: 768px) {
-    font-size: 44px;
+    font-size: ${props => props.theme.fontSizes[10]}px;
     max-width: 700px;
     margin-bottom: 24px;
   }
@@ -64,11 +64,11 @@ export const SectionHeroDesc = styled.p`
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 24px;
-  font-size: 12px;
+  font-size: ${props => props.theme.fontSizes[2]}px;
   line-height: 1.33;
   @media (min-width: 768px) {
     max-width: 506px;
-    font-size: 18px;
+    font-size: ${props => props.theme.fontSizes[5]}px;
   }
   @media (min-width: 1440px) {
     max-width: 656px;
@@ -83,13 +83,13 @@ export const SectionHeroBtn = styled.button`
   border: 2px solid ${props => props.theme.colors.greenAccent};
   padding: 10px 18px;
   font-weight: 400;
-  font-size: 10px;
+  font-size: ${props => props.theme.fontSizes[1]}px;
   line-height: 0.6;
   margin-bottom: 42px;
   cursor: pointer;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 250ms;
   @media (min-width: 768px) {
-    font-size: 16px;
+    font-size: ${props => props.theme.fontSizes[4]}px;
     padding: 18px 44px;
     margin-bottom: 60px;
   }
@@ -111,11 +111,11 @@ export const TimeBlock = styled.div`
 
 export const TimeText = styled.span`
   color: #23262a;
-  font-size: 10px;
+  font-size: ${props => props.theme.fontSizes[1]}px;
   line-height: 1.4;
   margin-left: 4px;
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: ${props => props.theme.fontSizes[3]}px;
     margin-left: 8px;
   }
 `;
